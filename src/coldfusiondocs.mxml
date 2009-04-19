@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	xmlns:business="com.coldfusiondocs.business.*"
+	xmlns:control="com.coldfusiondocs.control.*" 
+	xmlns:view="com.coldfusiondocs.views.*" 
+	creationComplete="onCreationComplete();" 
+	pageTitle="ColdFusionDocs" 
+	width="100%" 
+	height="100%" 
+	styleName="main"
+	horizontalAlign="center"
+	layout="absolute">
+	
+	<mx:Script>
+		<![CDATA[
+		
+			import com.adobe.cairngorm.control.CairngormEventDispatcher;
+			import com.adobe.cairngorm.control.CairngormEvent;
+			import com.coldfusiondocs.event.LoadDataEvent;
+			
+			private function onCreationComplete():void{
+				CairngormEventDispatcher.getInstance().dispatchEvent(new LoadDataEvent(LoadDataEvent.LOAD_CFML_ADOBE));
+				CairngormEventDispatcher.getInstance().dispatchEvent(new LoadDataEvent(LoadDataEvent.LOAD_CFML_RAILO));
+			}
+		]]>
+	</mx:Script>
+
+<!-- Includes the Services -->
+<business:Services id="dataServices" />
+	
+<!-- the FrontController, containing Commands specific to this appliation -->
+<control:AppController id="controller" />
+
+<mx:Style source="cfdocs.css" />
+
+<view:MainView id="vMainView" width="100%" height="100%" />	
+	
+</mx:Application>

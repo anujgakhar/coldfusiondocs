@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" width="300" height="100%" 
+	xmlns:control="com.coldfusiondocs.control.*" 
+	xmlns:view="com.coldfusiondocs.views.*" >
+	
+<mx:Script>
+	<![CDATA[
+		
+		private function switchLanguage():void
+		{
+			try
+			{
+				var lng:String = "";
+				var num:Number = this.myTabs.selectedIndex;
+				if(num == 0 ) lng = "cfml"; else lng = "railo";
+				
+				// this switches to previously selected item
+				if(lng == 'cfml'){
+					this.vAdobeCFML.itemClicked();
+				}
+				if(lng == 'railo'){
+					this.vRailoCFML.itemClicked();
+				}
+			} catch (err:Error){
+				
+			}
+		}
+		
+	]]>
+</mx:Script>
+
+		<mx:TabNavigator id="myTabs" width="100%" height="100%" change="switchLanguage()" >
+			<mx:VBox label="Adobe CFML">
+				<view:TagList id="vAdobeCFML" />
+			</mx:VBox>
+			<mx:VBox label="Railo" >
+				<view:TagListRailo id="vRailoCFML"   />
+			</mx:VBox>
+		</mx:TabNavigator>
+</mx:VBox>

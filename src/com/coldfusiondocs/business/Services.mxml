@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<cairngorm:ServiceLocator
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	xmlns:cairngorm="http://www.adobe.com/2006/cairngorm">
+
+<!-- The CFML XML Document-->
+<mx:HTTPService 
+	url="http://coldfusiondocs.com/app/xml/cfmldoc.xml" 
+	id="adobeCFMLService" 
+	resultFormat="e4x" 
+	showBusyCursor="true" />
+	
+<!-- The Railo XML Document-->	
+<mx:HTTPService 
+	url="http://coldfusiondocs.com/app/xml/cfmlrailo.xml" 
+	id="railoCFMLService" 
+	resultFormat="e4x" 
+	showBusyCursor="true" />
+	
+<!-- Link Webservice (used to get/add links)-->	
+<mx:WebService 
+	wsdl="http://coldfusiondocs.com/services/linkmanager.cfc?wsdl" 
+	id="linkService" 
+	showBusyCursor="true" />
+	
+</cairngorm:ServiceLocator>

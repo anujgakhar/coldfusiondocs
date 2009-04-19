@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml"
+width="100%" height="100%" 
+initialize="doInit()">
+
+<mx:Script>
+	<![CDATA[
+		import com.coldfusiondocs.event.AddLinkEvent;
+		import mx.collections.ArrayCollection;
+		import com.coldfusiondocs.event.GetLinkEvent;
+		import com.coldfusiondocs.model.LinkLocator;
+		import com.coldfusiondocs.model.ModelLocator;
+		import com.adobe.cairngorm.control.CairngormEventDispatcher;
+		import mx.validators.Validator;
+	
+		private function doInit():void{
+			currentState = "data_loading";
+			CairngormEventDispatcher.getInstance().dispatchEvent( new GetLinkEvent(GetLinkEvent.GET_LINK, ModelLocator.getInstance().currentItem ) );
+		}
+		
+		private function newLink():void{
+			this.currentState = 'add_link';
+		}
+		
+		private function addLink():void{
+			//validate first
+			var validations:Array = [
+	    		this.vEmail,
+	    		this.vName,
+	    		this.vTitle,
+	    		this.vURL
+	    	];
+	    	var errors:Array = Validator.validateAll(validations) ;
+	    	if (errors.length == 0)
+	    	{
+	    		// lets add the link
+				var _linkdata:Object = {
+					 addedBy:this.txtName.text,
+					 email:this.txtEmail.text,
+					 link:this.TxtUrl.text,
+    				 object:this.txtRelatedObject.text, 
+    				 linktitle:this.txtTitle.text
+				};
+				// fire off the add link event
+	    		CairngormEventDispatcher.getInstance().dispatchEvent( new AddLinkEvent(AddLinkEvent.ADD_LINK, _linkdata) );
+	    	}
+		}
+		
+ 		public function set dataState(val:String):void
+        {
+            switch(val)
+            {
+                case LinkLocator.STATE_READY:
+                    currentState = "list_links";
+                    break;
+                    
+                case LinkLocator.STATE_LOADING:
+                    currentState = "data_loading";
+                    break;
+            }
+        }		
+	]]>
+</mx:Script>
+
+<!-- some form validations-->
+<mx:StringValidator id="vName" source="{this.txtName}" property="text" required="true" requiredFieldError="Please Enter Name" minLength="4" tooShortError="Name appears to be too short?" />
+<mx:EmailValidator id="vEmail" source="{this.txtEmail}" property="text" required="true" requiredFieldError="Please enter Email Address" />
+<mx:StringValidator id="vTitle" source="{this.txtTitle}" property="text" required="true" maxLength="250" tooLongError="Max 250 chars allowed" />
+<mx:StringValidator id="vURL" source="{this.TxtUrl}" property="text" required="true" />  
+	
+<!-- bind the state to the model-->	
+<mx:Binding source="{LinkLocator.getInstance().data_state}" destination="dataState" />	
+ 
+<!-- some transitions for state change, they look nice - dont they?--> 
+<mx:transitions>
+	<mx:Transition id="myTransition" fromState="*" toState="list_links,add_link">
+	    <mx:Parallel target="{refPanel}">
+			<mx:WipeDown duration="2000" />
+			<mx:Move duration="1000" />
+	    </mx:Parallel>
+	</mx:Transition>
+</mx:transitions>
+
+<!-- the states-->
+<mx:states>
+	<!-- data loading - shows while webservice is loading links , can be prettified more I think but this will do-->
+	<mx:State name="data_loading">
+        <mx:AddChild position="firstChild">
+            <mx:VBox id="progressBox" width="100%" height="452" horizontalAlign="center" verticalAlign="middle">
+                <mx:ProgressBar indeterminate="true" label="Loading Data..."/>
+            </mx:VBox>
+        </mx:AddChild>
+    </mx:State>
+        
+    <!-- lists all the links for the selected left hand item-->    	
+	<mx:State name="list_links">
+		<mx:RemoveChild target="{addbox}" />
+		<mx:AddChild relativeTo="{refPanel}" position="firstChild"  creationPolicy="all">
+			<mx:Button id="lblPanel"
+				textDecoration="underline" label="Add New" 
+				useHandCursor="true" mouseChildren="false"
+				buttonMode="true" click="newLink()" left="40" />
+		</mx:AddChild>
+		<mx:SetProperty target="{lblPanel}" value="Add New" name="label"/>
+	</mx:State>
+	
+	<!-- this is the add link form-->
+	<mx:State name="add_link" >
+		<mx:RemoveChild target="{myList}" />	
+	
+		<mx:AddChild relativeTo="{refPanel}"  creationPolicy="all">
+			<mx:Button id="lblPanel1"
+				textDecoration="underline" label="Back to List View" 
+				useHandCursor="true" mouseChildren="false"
+				buttonMode="true" click="this.currentState='list_links'" left="40" />
+		</mx:AddChild>	
+		
+		<mx:AddChild position="lastChild" creationPolicy="all" relativeTo="{refPanel}">
+			<mx:VBox width="80%" height="100%" id="addbox">	
+			
+				<mx:Label id="lblMessage" 
+					fontWeight="bold" fontSize="11" 
+					color="black"  
+					textDecoration="underline" 
+					includeInLayout="true" />
+			
+				<mx:HBox width="60%" height="100%">
+					<mx:Form width="100%" height="100%">
+						<mx:FormItem label="Related Object">
+							<mx:Label text="{ModelLocator.getInstance().currentItem}" fontWeight="bold" id="txtRelatedObject" />
+						</mx:FormItem>
+						<mx:FormItem label="Your Name">
+							<mx:TextInput id="txtName"/>
+						</mx:FormItem>
+						<mx:FormItem label="Your Email">
+							<mx:TextInput id="txtEmail"/>
+						</mx:FormItem>
+					</mx:Form>	
+					
+					<mx:Form>
+						<mx:FormItem label="">
+							<mx:Label text=""  />
+						</mx:FormItem>
+						<mx:FormItem label="Link Title">
+							<mx:TextInput id="txtTitle" width="200"/>			
+						</mx:FormItem>
+						<mx:FormItem label="URL">
+							<mx:TextInput id="TxtUrl" width="200"/>
+						</mx:FormItem>
+						<mx:FormItem>
+							<mx:HBox width="100%">
+							<mx:Button id="btnSubmit" label="Submit" click="addLink()"/>	
+							<mx:Button label="Cancel" click="this.currentState='list_links'" />
+							</mx:HBox>
+						</mx:FormItem>
+					</mx:Form>
+				</mx:HBox>		
+		</mx:VBox>			
+	</mx:AddChild>
+	</mx:State>
+</mx:states>
+	
+	
+	<!--- the list showing the links-->
+	<mx:VBox width="100%" height="100%" label="" id="refPanel" >
+		<mx:List id="myList" itemRenderer="com.coldfusiondocs.views.RendererList"
+       			height="100%" width="100%" 
+        		variableRowHeight="true" 
+        		backgroundColor="white" dataProvider="{LinkLocator.getInstance().all_links}" 
+        		 > 
+    	</mx:List>
+	</mx:VBox>
+	
+</mx:VBox>		

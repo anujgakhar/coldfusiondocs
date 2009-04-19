@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox  xmlns:mx="http://www.adobe.com/2006/mxml"  width="100%" height="100%"  >
+	
+	<mx:Script>
+		<![CDATA[
+			import com.coldfusiondocs.event.TypeChangeEvent;
+			import com.adobe.cairngorm.control.CairngormEventDispatcher;
+			import com.coldfusiondocs.model.ModelLocator;
+			import mx.collections.ArrayCollection;
+			import mx.utils.StringUtil;
+			import com.coldfusiondocs.event.ItemClickEvent;
+			
+			[Bindable]
+			public var myTitle:String = "";	
+			
+			private function searchItem(item:Object):Boolean{
+				var isMatch:Boolean = false;
+				var searchText:String = StringUtil.trim(searchTag.text).toLowerCase();
+				if(item.objectName.toLowerCase().indexOf( searchText ) > -1 ){
+					isMatch = true;
+				}
+				return isMatch;
+			}			
+			
+			private function filterTags():void {
+				var tempData:ArrayCollection = ModelLocator.getInstance().all_railo_cfml_tags;
+
+				// new collection for changing grid's dataProvider (Default to tempData)
+				var newData:ArrayCollection = tempData;
+				
+				// text entered in search box (make it all lowercase)
+				var searchText:String = StringUtil.trim(searchTag.text).toLowerCase();
+				if(searchText.length > 0)
+				{
+					newData.filterFunction = searchItem;
+				} else {
+					newData.filterFunction = null;
+				}
+				newData.refresh();
+				this.tagGrid.dataProvider = newData;
+				changeTitle(newData.length);
+			}
+			
+			private function changeTitle(num:int):void
+	        {
+	        	this.myTitle = "listing " + num + " items...";
+	        }
+	        
+			public function itemClicked():void{
+				if(this.tagGrid.selectedItem != null) {
+					CairngormEventDispatcher.getInstance().dispatchEvent(new ItemClickEvent(ItemClickEvent.ITEM_CLICK_RAILO , this.tagGrid.selectedItem.objectName.toString()) );
+				} else {
+					// if nothing selected, just hide the right content
+					CairngormEventDispatcher.getInstance().dispatchEvent(new TypeChangeEvent(TypeChangeEvent.TYPE_CHANGE));
+				}
+			}	        
+		]]>
+	</mx:Script>
+	<mx:Panel title="Tags and Functions" height="100%" width="100%">
+       
+	         <mx:VBox width="100%" height="100%" >   
+	         <mx:Spacer height="5" width="100%"   /> 
+	             
+ 	         <mx:HBox width="90%">
+		         <mx:Label text="Search by name.." />
+		         <mx:TextInput width="100%" id="searchTag" right="10" left="10" change="filterTags()" />	         	
+	         </mx:HBox>
+	         
+			<mx:DataGrid 
+				dataProvider="{ModelLocator.getInstance().all_railo_cfml_tags}"
+				doubleClickEnabled="true" id="tagGrid" width="100%" height="100%"
+				itemClick = "itemClicked()" change="itemClicked()" 
+				creationComplete="changeTitle(tagGrid.dataProvider.length)" >
+		        <mx:columns>
+		              <mx:DataGridColumn dataField="objectName" headerText="{myTitle}" />
+		              <mx:DataGridColumn dataField="categoryType" visible="false" sortable="false"/>
+		              <mx:DataGridColumn dataField="addedIn" visible="false" sortable="false"/>
+		        </mx:columns>
+			</mx:DataGrid>
+			
+		</mx:VBox>
+		</mx:Panel>
+</mx:VBox>
+
+

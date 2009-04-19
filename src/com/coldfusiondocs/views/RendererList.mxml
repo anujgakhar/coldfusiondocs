@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+    <mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" >    
+        <mx:Script>
+            <![CDATA[
+                // Import Event and URLRequest classes.
+                import flash.events.Event;
+                import flash.net.URLRequest;
+                
+                private var u:URLRequest;
+            
+                // Event handler to open URL using 
+                // the navigateToURL() method.
+                private function handleClick(eventObj:Event):void {
+                    u = new URLRequest(data.Link);
+                    navigateToURL(u);
+                }   
+            ]]>
+        </mx:Script>
+    
+        <mx:HBox >  
+             <mx:Label id="PageTitle" text="{data.LinkTitle}" fontWeight="bold" />
+             <mx:Label id="AddedBy" text="(Added By: {data.AddedBy})"/>
+        </mx:HBox>
+
+        <!-- Define the Link control to open a URL. -->
+        <mx:LinkButton id="webPage" label="{data.Link}" 
+            click="handleClick(event);" color="blue"  />
+    </mx:VBox>

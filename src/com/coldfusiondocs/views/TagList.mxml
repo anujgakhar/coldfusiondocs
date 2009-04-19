@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox  xmlns:mx="http://www.adobe.com/2006/mxml"  width="100%" height="100%"  >
+	
+	<mx:Script>
+		<![CDATA[
+			import com.coldfusiondocs.model.ModelLocator;
+			import com.adobe.cairngorm.control.CairngormEventDispatcher;
+			import com.coldfusiondocs.event.ItemClickEvent;
+			import com.coldfusiondocs.event.TypeChangeEvent;
+			import mx.collections.ArrayCollection;
+			import mx.utils.StringUtil;
+			import mx.controls.Alert;
+			
+			[Bindable]
+			private var myTitle:String;
+			
+			private function changeTitle(num:int):void
+	        {
+	        	this.myTitle = "listing " + num + " items...";
+	        }			
+			
+			public function itemClicked():void{
+				if(this.tagGrid.selectedItem != null) {
+					CairngormEventDispatcher.getInstance().dispatchEvent(new ItemClickEvent(ItemClickEvent.ITEM_CLICK_ADOBE , this.tagGrid.selectedItem.objectName.toString()) );
+				} else {
+					// if nothing selected, just hide the right content
+					CairngormEventDispatcher.getInstance().dispatchEvent(new TypeChangeEvent(TypeChangeEvent.TYPE_CHANGE));
+				}
+			}
+			
+ 			public function set dataState(val:String):void
+            {
+                switch(val)
+                {
+                    case ModelLocator.STATE_READY:
+                        currentState = "data_loaded";
+                        break;
+                        
+                    case ModelLocator.STATE_LOADING:
+                        currentState = "data_loading";
+                        break;
+                }
+            }
+            
+			private function filterTags():void
+			{
+				var tempData:ArrayCollection = ModelLocator.getInstance().all_adobe_cfml_tags;
+
+				// new collection for changing grid's dataProvider (Default to tempData)
+				var newData:ArrayCollection = tempData;
+
+				// see if anything selected in the dropdowns
+				var categorySelected:Boolean = (this.categoryCombo.selectedIndex > 0) ? true : false;
+				var versionSelected:Boolean = (this.versionCombo.selectedIndex > 0) ? true : false;
+				
+				// text entered in search box (make it all lowercase)
+				var searchText:String = StringUtil.trim(searchTag.text).toLowerCase();
+				if(searchText.length > 0 || categorySelected || versionSelected )
+				{
+					newData.filterFunction = searchItem;
+				} else {
+					newData.filterFunction = null;
+				}
+				newData.refresh();
+				this.tagGrid.dataProvider = newData;
+				changeTitle(newData.length);
+			}	
+			
+			private function searchItem(item:Object):Boolean{
+				// start with everything as true
+				var isMatch:Boolean = true;
+				
+				// see if anything selected in the dropdowns
+				var categorySelected:Boolean = (this.categoryCombo.selectedIndex > 0) ? true : false;
+				var versionSelected:Boolean = (this.versionCombo.selectedIndex > 0) ? true : false;
+				
+				// if there is a selected category ?
+				if (categorySelected){
+					if(item.categoryType == this.categoryCombo.selectedLabel){
+						isMatch = true;
+					} else {
+						isMatch = false; // this is where we filter the item out if it doesnt meet the criteria
+					}
+				}
+				
+				// if there is a selected version ?
+				if(isMatch && versionSelected){
+					switch(this.versionCombo.selectedIndex){
+						case 1:
+							isMatch = true;
+							break;
+						case 2:
+							if(item.addedIn == "8"){
+								isMatch = true;
+							} else {
+								isMatch = false;
+							}
+							break;	
+						case 3:
+							if(item.addedIn == "0"){
+								isMatch = true;
+							} else {
+								isMatch = false;
+							}
+							break;
+					}
+				}
+				
+				// finally, see if anything has been typed in the search box ?
+				var searchText:String = StringUtil.trim(searchTag.text).toLowerCase();
+				if(isMatch && searchText.length > 0 ){
+					if(item.objectName.toLowerCase().indexOf( searchText ) > -1 ){
+						isMatch = true;
+					} else {
+						isMatch = false;
+					}					
+				}
+
+				return isMatch;
+			}						
+		]]>
+	</mx:Script>
+	
+  <mx:Binding source="{ModelLocator.getInstance().data_state}" destination="dataState" />
+	
+	<mx:states>
+		<mx:State name="data_loading">
+            <mx:AddChild position="firstChild">
+                <mx:VBox id="progressBox" width="100%" height="452" horizontalAlign="center" verticalAlign="middle">
+                    <mx:ProgressBar indeterminate="true" label="Loading Data..."/>
+                </mx:VBox>
+            </mx:AddChild>
+        </mx:State>
+
+		<mx:State name="data_loaded">
+			<mx:RemoveChild target="{progressBox}" /> 
+		
+			<mx:AddChild position="firstChild">
+				<mx:Panel title="Tags and Functions" height="100%" width="100%">
+		         <mx:VBox width="100%" height="100%" >   
+		         <mx:Spacer height="5" width="100%"   /> 
+	           	 <mx:HBox width="90%"> 
+	           		 <mx:ComboBox id="versionCombo" width="100" change="filterTags()">
+		           	 	<mx:dataProvider>
+		                <mx:Array>
+		                	<mx:String>Version...</mx:String>
+		                    <mx:String>All</mx:String>
+		                    <mx:String>CF8 only</mx:String>
+		                    <mx:String>Before CF8</mx:String>
+		                 </mx:Array>
+		          		 </mx:dataProvider>
+			       	 </mx:ComboBox>
+			       	 
+			       	 <mx:ComboBox id="categoryCombo" 
+			       	 	dataProvider="{ModelLocator.getInstance().all_adobe_cfml_categories}" 
+			       	 	width="200" labelField="categoryName" change="filterTags()"  />
+		          </mx:HBox>
+			            
+			       <mx:Spacer height="5" width="100%"   />
+			         
+			       <mx:HBox width="90%">
+				         <mx:Label text="Search by name.." />
+				         <mx:TextInput width="100%" id="searchTag"  right="10" left="10" change="filterTags()" />	         	
+			       </mx:HBox>
+			         
+					<mx:DataGrid 
+						dataProvider="{ModelLocator.getInstance().all_adobe_cfml_tags}"
+						doubleClickEnabled="true" id="tagGrid" width="100%" height="100%"
+						itemClick = "itemClicked()" change="itemClicked()"
+						creationComplete="changeTitle(tagGrid.dataProvider.length)"  >
+				        <mx:columns>
+				              <mx:DataGridColumn dataField="objectName" headerText="{myTitle}"/>
+				              <mx:DataGridColumn dataField="categoryType" visible="false" sortable="false"/>
+				              <mx:DataGridColumn dataField="addedIn" visible="false" sortable="false"/>
+				        </mx:columns>
+					</mx:DataGrid>
+					
+				</mx:VBox>
+				</mx:Panel>
+			</mx:AddChild>
+		</mx:State>
+	</mx:states>
+	
+</mx:VBox>
+
+

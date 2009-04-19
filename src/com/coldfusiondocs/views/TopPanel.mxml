@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" backgroundColor="#003399" width="100%" >
+
+<mx:Script>
+	<![CDATA[
+		import flash.net.navigateToURL;
+		import flash.net.URLRequest;
+            
+        private function browseToHomepage():void
+		{
+			var url:URLRequest = new URLRequest("http://www.coldfusiondocs.com");
+			navigateToURL(url, "_blank");
+		}
+  		
+ 	]]>
+</mx:Script>
+
+<mx:HBox width="100%" height="55"  >   
+      	<mx:Label text="coldfusiondocs.com" fontSize="34" fontWeight="bold" 
+		fontFamily="Trebuchet MS" color="#ffffff"  click="browseToHomepage()" width="750" />  	
+</mx:HBox>
+</mx:VBox>
