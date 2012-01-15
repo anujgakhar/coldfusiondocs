@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				xmlns:s="library://ns.adobe.com/flex/spark" 
+				xmlns:mx="library://ns.adobe.com/flex/mx" 
+				autoDrawBackground="true" height="20">
+	
+	<fx:Script>
+		<![CDATA[
+			import com.coldfusiondocs.model.Item;
+			
+			[Bindable]
+			private var thisItem:Item;
+			
+			override public function set data(value:Object):void
+			{
+				if(value)
+				{
+					thisItem = Item(value);
+				}
+			}
+		]]>
+	</fx:Script>
+	
+	<s:Label text="{thisItem.objectName}" left="10" verticalCenter="0" textAlign="left"/>
+</s:ItemRenderer>

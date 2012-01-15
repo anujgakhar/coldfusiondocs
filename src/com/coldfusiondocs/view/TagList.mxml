@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009"
+		 xmlns:s="library://ns.adobe.com/flex/spark"
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 width="100%"
+		 height="100%"
+		 xmlns:parsley="http://www.spicefactory.org/parsley">
+
+	<fx:Script>
+		<![CDATA[
+			import com.coldfusiondocs.controller.MainController;
+			import com.coldfusiondocs.renderers.TagRenderer;
+
+			[Bindable]
+			public var controller:MainController;
+		]]>
+	</fx:Script>
+
+	<fx:Declarations>
+		<parsley:FastInject objectId="mainController"
+							property="controller"/>
+	</fx:Declarations>
+
+	<s:Panel title="Tags and Functions"
+			 height="100%"
+			 width="100%"
+			 top="0">
+
+		<s:layout>
+			<s:VerticalLayout gap="3"/>
+		</s:layout>
+
+		<s:VGroup width="90%"
+				  verticalCenter="0"
+				  verticalAlign="middle"
+				  horizontalAlign="center"
+				  horizontalCenter="0">
+			<s:HGroup width="100%"
+					  horizontalCenter="0">
+				<s:ComboBox width="100%"
+							requireSelection="true">
+					<s:dataProvider>
+						<s:ArrayList source="[Version...,All,CF8 Only, Before CF8]"/>
+					</s:dataProvider>
+				</s:ComboBox>
+
+				<s:ComboBox width="200"
+							labelField="categoryName"
+							dataProvider="{controller.model.all_acf_categories}"
+							requireSelection="true"/>
+			</s:HGroup>
+
+			<s:HGroup width="100%"
+					  horizontalCenter="0">
+				<s:Label text="Search by name..."/>
+				<s:TextInput width="100%"
+							 id="searchTag"
+							 text="@{controller.acfFilterCriteria}"
+							 right="10"
+							 left="10"/>
+			</s:HGroup>
+		</s:VGroup>
+
+		<s:List dataProvider="{controller.model.all_acf_tags}"
+				width="100%"
+				height="100%"
+				itemRenderer="com.coldfusiondocs.renderers.TagRenderer"/>
+	</s:Panel>
+</s:Group>
