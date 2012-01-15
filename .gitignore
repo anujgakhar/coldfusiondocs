@@ -1,3 +1,9 @@
 .DS_Store
 .tmproj
 .project
+.flexProperties
+.actionScriptProperties
+.settings
+html-template
+bin-debug
+
