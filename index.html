@@ -3,22 +3,13 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="author" content="Anuj Gakhar">
-  <link rel="stylesheet" href="includes/css/bootstrap.min.css" type="text/css" charset="utf-8">
-  <link rel="stylesheet" href="includes/css/application.css" type="text/css" charset="utf-8">
+  <link rel="stylesheet" href="assets/vendor/bootstrap.min.css" type="text/css" charset="utf-8">
+  <link rel="stylesheet" href="assets/css/application.css" type="text/css" charset="utf-8">
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="includes/js/spin.min.js"></script>
-  <script type="text/javascript" src="includes/js/docs_controller.js"></script>
-  <script type="text/javascript">
-	(function() {
-	  $(document).ready(function() {
-	    var docs_controller;
-	    docs_controller = new DocsController({
-	      container: $("#docsContainer")
-	    });
-	    return docs_controller.loadConfig("data/config_army.xml");
-	  });
-	}).call(this);
-  </script>
+  <script>window.jQuery || document.write('<script src="/assets/vendor/jquery.min.js"><\/script>')</script>
+  <script type="text/javascript" src="assets/vendor/spin.min.js"></script>
+  <script type="text/javascript" src="assets/js/docs_controller.js"></script>
+  <script type="text/javascript" src="assets/js/app.js"></script>
 </head>
   <body>
 	<div class="topbar">
@@ -35,36 +26,32 @@
 		</div>
 	</div>
 	
-	<div id="docsContainer">
-	  <div class="alert-message block-message error" id="errorPanel">
-         <p id="message">There has been an error!</p>
-      </div>
-      <div id="loadingPanel">
-         <h1 id="loadingLabel">Loading content...</h1>
-      </div>
-		<!---<div class="sidebar">
-			<div class="well">
-				<h5>Sidebar</h5>
-				<ul>
+	<div class="container-fluid" id="docsContainer">
+			<div class="filler sidebar"></div>
+			<div class="filler content"></div>
+			<div class="sidebar">
+				<ul class="pills">
+					<li class="active"><a href="#cfml">ColdFusion</a></li>
+					<li><a href="#railo">Railo</a></li>
+				</ul>
+				<ul id="docItems">
+					<li><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
 					<li><a href="#">Link</a></li>
 					<li><a href="#">Link</a></li>
 					<li><a href="#">Link</a></li>
 					<li><a href="#">Link</a></li>
 				</ul>
 			</div>
-		</div>
 
-		<div class="content">
-			<div class="hero-unit">
-				<h1>Hello, world!</h1>
-				<p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-				<p><a class="btn primary large">Learn more &raquo;</a></p>
-			</div>-->
-
-		</div>
+			<div class="content">
+				<div class="alert-message block-message error" id="errorPanel">
+					<p id="message">There has been an error!</p>
+				</div>
+				<div id="loadingPanel">
+					<h1 id="loadingLabel">Loading content...</h1>
+				</div>
+			</div>
 	</div>
-	
-
-
   </body>
 </html>

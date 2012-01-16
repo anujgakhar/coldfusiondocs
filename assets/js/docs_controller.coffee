@@ -8,6 +8,9 @@ class @DocsController
     @loadingPanel             = params.loadingPanel        || @container.find("#loadingPanel")
     @spinnerRadius            = params.spinnerRadius       || 10
 
+	# Item Container
+    @docItems                 = params.docItems            || @container.find("#docItems")
+
     # Configurable CSS Classes
     @loadingClass             = params.loadingClass        || "loading"
     @errorClass               = params.errorClass          || "error"
@@ -16,6 +19,10 @@ class @DocsController
     @errorPanel               = params.errorFlash          || @container.find("#errorPanel")
     @errorMessage             = params.errorMessage        || @container.find("#message")
     @errorMessageOnXML        = params.errorMessageOnXML   || "Sorry! We cannot load the configuration XML."
+
+    #Non-configurable attributes
+    @acfConfigLoaded          = false
+    @railoConfigLoaded        = false
 
     # Configure and position spinner.
     @spinner = new Spinner(
@@ -42,14 +49,30 @@ class @DocsController
     $.ajax({
         url: url
         dataType: "xml"
+        timeout: 3000
+        cache: false
+        complete: (jqXHR, textStatus) =>
+           @removeSpinner()
         error: (jqXHR, textStatus, errorThrown) =>
            @errorMessage.html(@errorMessageOnXML)
            @container.addClass(@errorClass)
-           @removeSpinner()
         success: (data) =>
-           @config_xml             = $(data)
-           @slides                 = @config_xml.find("slides > slide")
-           @posters                = @config_xml.find("posters url")
+           @config_xml      = $(data)
+           @categories      = @config_xml.find("categories > category")
+           @acfConfigLoaded = true
+           
+           @docItems.find('li').remove()
+
+           index = 0 
+           for category in @categories
+             current          = $(category)
+             categoryName     = current.find("name").text()
+             listItem         = $('<li/>')
+             listItem.attr("data-index", index)
+             listItem.attr("data-name", categoryName)
+             listItem.append($('<a>').attr('href','#').attr('class','docItem')).append(categoryName)
+             @docItems.append(listItem)
+             index += 1
     })
     false
 

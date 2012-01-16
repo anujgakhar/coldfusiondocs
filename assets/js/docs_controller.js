@@ -8,11 +8,14 @@
       this.container = params.container || $("#docsContainer");
       this.loadingPanel = params.loadingPanel || this.container.find("#loadingPanel");
       this.spinnerRadius = params.spinnerRadius || 10;
+      this.docItems = params.docItems || this.container.find("#docItems");
       this.loadingClass = params.loadingClass || "loading";
       this.errorClass = params.errorClass || "error";
       this.errorPanel = params.errorFlash || this.container.find("#errorPanel");
       this.errorMessage = params.errorMessage || this.container.find("#message");
       this.errorMessageOnXML = params.errorMessageOnXML || "Sorry! We cannot load the configuration XML.";
+      this.acfConfigLoaded = false;
+      this.railoConfigLoaded = false;
       this.spinner = new Spinner({
         lines: 12,
         length: 7,
@@ -38,15 +41,36 @@
       $.ajax({
         url: url,
         dataType: "xml",
-        error: function(jqXHR, textStatus, errorThrown) {
-          _this.errorMessage.html(_this.errorMessageOnXML);
-          _this.container.addClass(_this.errorClass);
+        timeout: 3000,
+        cache: false,
+        complete: function(jqXHR, textStatus) {
           return _this.removeSpinner();
         },
+        error: function(jqXHR, textStatus, errorThrown) {
+          _this.errorMessage.html(_this.errorMessageOnXML);
+          return _this.container.addClass(_this.errorClass);
+        },
         success: function(data) {
+          var category, categoryName, current, index, listItem, _i, _len, _ref, _results;
           _this.config_xml = $(data);
-          _this.slides = _this.config_xml.find("slides > slide");
-          return _this.posters = _this.config_xml.find("posters url");
+          _this.categories = _this.config_xml.find("categories > category");
+          _this.acfConfigLoaded = true;
+          _this.docItems.find('li').remove();
+          index = 0;
+          _ref = _this.categories;
+          _results = [];
+          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+            category = _ref[_i];
+            current = $(category);
+            categoryName = current.attr("name");
+            listItem = $('<li/>');
+            listItem.attr("data-index", index);
+            listItem.attr("data-name", categoryName);
+            listItem.append($('<a>').attr('href', '#').attr('class', 'docItem')).append(categoryName);
+            _this.docItems.append(listItem);
+            _results.push(index += 1);
+          }
+          return _results;
         }
       });
       return false;
