@@ -12,7 +12,7 @@ class @DocsController
     @docItems                 = params.docItems            || @container.find("#docItems")
     @selectedItemDetails      = params.selectedItemDetails || @container.find("#selectedItemDetails")
     @externalFrame            = params.externalFrame       || @container.find('#externalFrame')
-    @docItemsContainer        = params.docItemsContainer   || @container.find('#docItemsContainer')
+    @sideBarContentArea       = params.sideBarContentArea   || @container.find('#sideBarMiddle')
     @searchInput              = params.searchInput         || @container.find('#searchInput')
 
     # Configurable CSS Classes
@@ -47,8 +47,7 @@ class @DocsController
     spinnerElement.css("margin-left", "#{-@spinnerRadius}px")
     spinnerElement.css("position", "absolute")
     @loadingPanel.append(@spinner.el)
-    @docItemsContainer.css('height', screen.height - 100)
-    @selectedItemDetails.css('height', screen.height - 100)
+    @sideBarContentArea.css('height', $(document).height() - 199)
 
     @searchInput.bind 'keyup mouseup change', ( =>
       @filterResults() if @acfConfigLoaded
@@ -83,7 +82,6 @@ class @DocsController
   parseXML: (criteria = "") ->
     @config_xml   = $(@acfConfigXML)
     @objects      = @config_xml.find("object")
-    console.log criteria
     @docItems.find('li').remove()
     index = 0 
     for obj in @objects

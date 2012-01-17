@@ -12,7 +12,7 @@
       this.docItems = params.docItems || this.container.find("#docItems");
       this.selectedItemDetails = params.selectedItemDetails || this.container.find("#selectedItemDetails");
       this.externalFrame = params.externalFrame || this.container.find('#externalFrame');
-      this.docItemsContainer = params.docItemsContainer || this.container.find('#docItemsContainer');
+      this.sideBarContentArea = params.sideBarContentArea || this.container.find('#sideBarMiddle');
       this.searchInput = params.searchInput || this.container.find('#searchInput');
       this.loadingClass = params.loadingClass || "loading";
       this.errorClass = params.errorClass || "error";
@@ -39,8 +39,7 @@
       spinnerElement.css("margin-left", "" + (-this.spinnerRadius) + "px");
       spinnerElement.css("position", "absolute");
       this.loadingPanel.append(this.spinner.el);
-      this.docItemsContainer.css('height', screen.height - 100);
-      this.selectedItemDetails.css('height', screen.height - 100);
+      this.sideBarContentArea.css('height', $(document).height() - 199);
       this.searchInput.bind('keyup mouseup change', (function() {
         if (_this.acfConfigLoaded) _this.filterResults();
         return false;
@@ -83,7 +82,6 @@
       if (criteria == null) criteria = "";
       this.config_xml = $(this.acfConfigXML);
       this.objects = this.config_xml.find("object");
-      console.log(criteria);
       this.docItems.find('li').remove();
       index = 0;
       _ref = this.objects;

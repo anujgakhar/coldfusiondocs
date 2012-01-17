@@ -3,31 +3,53 @@ body {
    background:#fff;
 }
 html, body { height: 100%;    overflow:hidden;}
-.container-fluid { min-height: 100%; margin:0px 0px; padding-right:0px;}
-.container-fluid > .sidebar, .container-fluid > .content {
-	padding: 0px 0 0 0px;
+.container-fluid { 
+	margin:0px 0px; 
+	padding-right:0px; 
+	min-height:100%;
+}
+iframe {
+	width:100%; 
+	border:none;
+	height:100%; 
+}
+#docsContainer{
+	bottom:50; 
+	top:40; 
+	right:0; 
+	left:0; 
+	border-bottom:5px solid #404040; 
+	width:100%; 
+	height:90%;
+	min-height:90%;
+	background:#fff;
 }
 #searchBox{
 	background:#404040;
 	border:none;
 	padding:10px;
 	color:white;
-	margin:0px 0px 10px 0px;
+	margin:0px 0px 0px 0px;
 }
+#sideBarMiddle{
+	padding:0px;
+	overflow:auto;
+	overflow-x:hidden;
+}
+#docItemsContainer{margin-top:10px;}
+
 .container-fluid > .sidebar {
-	background: #fff;
-	border-right:5px solid #404040;
 	left:0px;
 	width: 240px;
+	border-right:5px solid #404040;
+	min-height:100%;
 }
-#docItemsContainer{
-	overflow:auto;
-	position:relative;
-}
-.container-fluid > .content {
-	background: #ffffff;
-	margin-left: 260px;
-	height:100%;
+.container-fluid > .content{
+	min-height:100%;
+	position:absolute;
+	right:0;
+	left:245px;
+	margin:0px;
 }
 #loadingPanel {
    background: rgba(255,255,255,0.75);
