@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="assets/css/application.css" type="text/css" charset="utf-8">
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/assets/vendor/jquery.min.js"><\/script>')</script>
+  <script type="text/javascript" src="assets/js/jquery.equalheights.js"></script>
   <script type="text/javascript" src="assets/vendor/spin.min.js"></script>
   <script type="text/javascript" src="assets/js/docs_controller.js"></script>
   <script type="text/javascript" src="assets/js/app.js"></script>
@@ -26,14 +27,18 @@
 		</div>
 	</div>
 	
-	<div class="container-fluid" id="docsContainer">
+	<div id="docsContainer">
+		<div class="container-fluid">
 			<div class="sidebar">
 				<div id="searchBox">
 					<input id="searchInput" type="text" size="20" class="large" name="search"/>
 				</div>	
-				<div id="docItemsContainer">
-					<ul id="docItems"></ul>
-				</div>	
+
+				<div id="sideBarMiddle">
+					<div id="docItemsContainer">
+						<ul id="docItems"></ul>
+					</div>	
+				</div>
 			</div>
 
 			<div class="content">
@@ -43,11 +48,14 @@
 				<div id="loadingPanel">
 					<h1 id="loadingLabel">Loading content...</h1>
 				</div>
-				
-				<div id="selectedItemDetails">
-					<iframe src="" width="100%" height="100%" frameborder="0" id="externalFrame"></iframe>
-				</div>
+
+				<iframe src="" width="100%" height="100%" frameborder="0" id="externalFrame"></iframe>
 			</div>
+		</div>
+	</div>	
+	
+	<div id="footer">
+		ColdFusionDocs.com
 	</div>
   </body>
 </html>
