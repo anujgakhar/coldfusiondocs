@@ -2,31 +2,32 @@ body {
    padding-top: 40px; 
    background:#fff;
 }
-html, body { height: 100%; }
-.container-fluid { min-height: 100%; margin:0px 0px;}
-.filler{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 0;
-    padding-right: 20px;
-}
-.filler.content {
-    z-index: -1;    
-}
+html, body { height: 100%;    overflow:hidden;}
+.container-fluid { min-height: 100%; margin:0px 0px; padding-right:0px;}
 .container-fluid > .sidebar, .container-fluid > .content {
-	padding: 20px 0 0 0px;
+	padding: 0px 0 0 0px;
+}
+#searchBox{
+	background:#404040;
+	border:none;
+	padding:10px;
+	color:white;
+	margin:0px 0px 10px 0px;
 }
 .container-fluid > .sidebar {
 	background: #fff;
 	border-right:5px solid #404040;
 	left:0px;
+	width: 240px;
+}
+#docItemsContainer{
+	overflow:auto;
+	position:relative;
 }
 .container-fluid > .content {
 	background: #ffffff;
-	margin-left: 240px;
+	margin-left: 260px;
+	height:100%;
 }
 #loadingPanel {
    background: rgba(255,255,255,0.75);

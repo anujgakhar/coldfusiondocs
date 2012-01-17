@@ -8,8 +8,12 @@ class @DocsController
     @loadingPanel             = params.loadingPanel        || @container.find("#loadingPanel")
     @spinnerRadius            = params.spinnerRadius       || 10
 
-	# Item Container
+	# Content Container
     @docItems                 = params.docItems            || @container.find("#docItems")
+    @selectedItemDetails      = params.selectedItemDetails || @container.find("#selectedItemDetails")
+    @externalFrame            = params.externalFrame       || @container.find('#externalFrame')
+    @docItemsContainer        = params.docItemsContainer   || @container.find('#docItemsContainer')
+    @searchInput              = params.searchInput         || @container.find('#searchInput')
 
     # Configurable CSS Classes
     @loadingClass             = params.loadingClass        || "loading"
@@ -23,6 +27,8 @@ class @DocsController
     #Non-configurable attributes
     @acfConfigLoaded          = false
     @railoConfigLoaded        = false
+    @acfConfigXML             = ""
+    @acfBasePath              = "http://assets.coldfusiondocs.com/html/cfml/"
 
     # Configure and position spinner.
     @spinner = new Spinner(
@@ -41,8 +47,19 @@ class @DocsController
     spinnerElement.css("margin-left", "#{-@spinnerRadius}px")
     spinnerElement.css("position", "absolute")
     @loadingPanel.append(@spinner.el)
+    @docItemsContainer.css('height', screen.height - 100)
+    @selectedItemDetails.css('height', screen.height - 100)
 
-  # Loads XML data for a supplied URL.
+    @searchInput.bind 'keyup mouseup change', ( =>
+      @filterResults() if @acfConfigLoaded
+      false
+    )
+
+  filterResults: ->
+    @parseXML(@searchInput.val())
+    false     
+
+# Loads XML data for a supplied URL.
   loadConfig: (url) ->
     @container.addClass(@loadingClass)
     @url = url
@@ -57,25 +74,42 @@ class @DocsController
            @errorMessage.html(@errorMessageOnXML)
            @container.addClass(@errorClass)
         success: (data) =>
-           @config_xml      = $(data)
-           @categories      = @config_xml.find("categories > category")
            @acfConfigLoaded = true
-           
-           @docItems.find('li').remove()
-
-           index = 0 
-           for category in @categories
-             current          = $(category)
-             categoryName     = current.find("name").text()
-             listItem         = $('<li/>')
-             listItem.attr("data-index", index)
-             listItem.attr("data-name", categoryName)
-             listItem.append($('<a>').attr('href','#').attr('class','docItem')).append(categoryName)
-             @docItems.append(listItem)
-             index += 1
+           @acfConfigXML = data
+           @parseXML()
     })
     false
 
+  parseXML: (criteria = "") ->
+    @config_xml   = $(@acfConfigXML)
+    @objects      = @config_xml.find("object")
+    console.log criteria
+    @docItems.find('li').remove()
+    index = 0 
+    for obj in @objects
+      current          = $(obj)
+      objName     = current.attr("name")
+      docUrl           = current.find("docURL").text()
+      if criteria == "" || objName.indexOf(criteria) != -1
+        listItem         = $('<li/>')
+        listItem.attr("data-index", index)
+        listItem.attr("data-name", objName)
+        listItem.attr("data-url", docUrl)
+        href             = $('<a/>')
+        href.attr('class', 'docItem').attr('href','#')
+        href.bind 'click', @listItemClick
+        href.append(objName) 
+        listItem.append(href)
+        @docItems.append(listItem)
+        index += 1
+
+    @docItems.find("a").click( (event) =>
+      clickedListItem = $(event.target).parent()
+      objectUrl = clickedListItem.attr("data-url").split("/") 
+      fileName = objectUrl[objectUrl.length - 1]
+      @externalFrame.attr("src", @acfBasePath + fileName)
+    )
+	
   removeSpinner: ->
     @container.removeClass(@loadingClass)
-    $(@spinner.el).remove()
+    $(@spinner.el).remove()  

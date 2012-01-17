@@ -3,12 +3,17 @@
   this.DocsController = (function() {
 
     function DocsController(params) {
-      var spinnerElement;
+      var spinnerElement,
+        _this = this;
       if (params == null) params = {};
       this.container = params.container || $("#docsContainer");
       this.loadingPanel = params.loadingPanel || this.container.find("#loadingPanel");
       this.spinnerRadius = params.spinnerRadius || 10;
       this.docItems = params.docItems || this.container.find("#docItems");
+      this.selectedItemDetails = params.selectedItemDetails || this.container.find("#selectedItemDetails");
+      this.externalFrame = params.externalFrame || this.container.find('#externalFrame');
+      this.docItemsContainer = params.docItemsContainer || this.container.find('#docItemsContainer');
+      this.searchInput = params.searchInput || this.container.find('#searchInput');
       this.loadingClass = params.loadingClass || "loading";
       this.errorClass = params.errorClass || "error";
       this.errorPanel = params.errorFlash || this.container.find("#errorPanel");
@@ -16,6 +21,8 @@
       this.errorMessageOnXML = params.errorMessageOnXML || "Sorry! We cannot load the configuration XML.";
       this.acfConfigLoaded = false;
       this.railoConfigLoaded = false;
+      this.acfConfigXML = "";
+      this.acfBasePath = "http://assets.coldfusiondocs.com/html/cfml/";
       this.spinner = new Spinner({
         lines: 12,
         length: 7,
@@ -32,7 +39,18 @@
       spinnerElement.css("margin-left", "" + (-this.spinnerRadius) + "px");
       spinnerElement.css("position", "absolute");
       this.loadingPanel.append(this.spinner.el);
+      this.docItemsContainer.css('height', screen.height - 100);
+      this.selectedItemDetails.css('height', screen.height - 100);
+      this.searchInput.bind('keyup mouseup change', (function() {
+        if (_this.acfConfigLoaded) _this.filterResults();
+        return false;
+      }));
     }
+
+    DocsController.prototype.filterResults = function() {
+      this.parseXML(this.searchInput.val());
+      return false;
+    };
 
     DocsController.prototype.loadConfig = function(url) {
       var _this = this;
@@ -51,29 +69,50 @@
           return _this.container.addClass(_this.errorClass);
         },
         success: function(data) {
-          var category, categoryName, current, index, listItem, _i, _len, _ref, _results;
-          _this.config_xml = $(data);
-          _this.categories = _this.config_xml.find("categories > category");
           _this.acfConfigLoaded = true;
-          _this.docItems.find('li').remove();
-          index = 0;
-          _ref = _this.categories;
-          _results = [];
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            category = _ref[_i];
-            current = $(category);
-            categoryName = current.attr("name");
-            listItem = $('<li/>');
-            listItem.attr("data-index", index);
-            listItem.attr("data-name", categoryName);
-            listItem.append($('<a>').attr('href', '#').attr('class', 'docItem')).append(categoryName);
-            _this.docItems.append(listItem);
-            _results.push(index += 1);
-          }
-          return _results;
+          _this.acfConfigXML = data;
+          return _this.parseXML();
         }
       });
       return false;
+    };
+
+    DocsController.prototype.parseXML = function(criteria) {
+      var current, docUrl, href, index, listItem, obj, objName, _i, _len, _ref,
+        _this = this;
+      if (criteria == null) criteria = "";
+      this.config_xml = $(this.acfConfigXML);
+      this.objects = this.config_xml.find("object");
+      console.log(criteria);
+      this.docItems.find('li').remove();
+      index = 0;
+      _ref = this.objects;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        obj = _ref[_i];
+        current = $(obj);
+        objName = current.attr("name");
+        docUrl = current.find("docURL").text();
+        if (criteria === "" || objName.indexOf(criteria) !== -1) {
+          listItem = $('<li/>');
+          listItem.attr("data-index", index);
+          listItem.attr("data-name", objName);
+          listItem.attr("data-url", docUrl);
+          href = $('<a/>');
+          href.attr('class', 'docItem').attr('href', '#');
+          href.bind('click', this.listItemClick);
+          href.append(objName);
+          listItem.append(href);
+          this.docItems.append(listItem);
+          index += 1;
+        }
+      }
+      return this.docItems.find("a").click(function(event) {
+        var clickedListItem, fileName, objectUrl;
+        clickedListItem = $(event.target).parent();
+        objectUrl = clickedListItem.attr("data-url").split("/");
+        fileName = objectUrl[objectUrl.length - 1];
+        return _this.externalFrame.attr("src", _this.acfBasePath + fileName);
+      });
     };
 
     DocsController.prototype.removeSpinner = function() {

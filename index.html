@@ -27,21 +27,13 @@
 	</div>
 	
 	<div class="container-fluid" id="docsContainer">
-			<div class="filler sidebar"></div>
-			<div class="filler content"></div>
 			<div class="sidebar">
-				<ul class="pills">
-					<li class="active"><a href="#cfml">ColdFusion</a></li>
-					<li><a href="#railo">Railo</a></li>
-				</ul>
-				<ul id="docItems">
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-				</ul>
+				<div id="searchBox">
+					<input id="searchInput" type="text" size="20" class="large" name="search"/>
+				</div>	
+				<div id="docItemsContainer">
+					<ul id="docItems"></ul>
+				</div>	
 			</div>
 
 			<div class="content">
@@ -50,6 +42,10 @@
 				</div>
 				<div id="loadingPanel">
 					<h1 id="loadingLabel">Loading content...</h1>
+				</div>
+				
+				<div id="selectedItemDetails">
+					<iframe src="" width="100%" height="100%" frameborder="0" id="externalFrame"></iframe>
 				</div>
 			</div>
 	</div>
