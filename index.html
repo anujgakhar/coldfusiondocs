@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="assets/css/application.css" type="text/css" charset="utf-8">
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/assets/vendor/jquery.min.js"><\/script>')</script>
-  <script type="text/javascript" src="assets/js/jquery.equalheights.js"></script>
   <script type="text/javascript" src="assets/vendor/spin.min.js"></script>
   <script type="text/javascript" src="assets/js/docs_controller.js"></script>
   <script type="text/javascript" src="assets/js/app.js"></script>
@@ -36,7 +35,7 @@
 
 				<div id="sideBarMiddle">
 					<div id="docItemsContainer">
-						<ul id="docItems"></ul>
+						<ul id="docItems" class="unstyled"></ul>
 					</div>	
 				</div>
 			</div>
@@ -48,8 +47,14 @@
 				<div id="loadingPanel">
 					<h1 id="loadingLabel">Loading content...</h1>
 				</div>
-
-				<iframe src="" width="100%" height="100%" frameborder="0" id="externalFrame"></iframe>
+				
+				<div id="acfContainer">
+					<iframe src="" width="100%" height="100%" frameborder="0" id="externalFrameACF"></iframe>
+				</div>	
+				
+				<div id="railoContainer">
+					<iframe src="" width="100%" height="100%" frameborder="0" id="externalFrameRailo"></iframe>
+				</div>
 			</div>
 		</div>
 	</div>	

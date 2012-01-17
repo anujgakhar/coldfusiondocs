@@ -12,8 +12,19 @@ iframe {
 	width:100%; 
 	border:none;
 	height:100%; 
+	display:block;
 }
 #footer{margin:auto;text-align:center;padding-top:10px;}
+ul#docItems li{
+	padding:3px 5px 3px 10px;
+}
+ul#docItems li.selected{
+	background:#404040;
+	color:#fff;
+}
+ul#docItems li.selected a{
+	color:#fff;
+}
 #docsContainer{
 	bottom:50; 
 	top:40; 
@@ -24,6 +35,12 @@ iframe {
 	height:90%;
 	min-height:90%;
 	background:#fff;
+}
+#acfContainer, #railoContainer{
+	height:50%;
+}
+#acfContainer{
+	border-bottom:5px solid #404040;
 }
 #searchBox{
 	background:#404040;
@@ -47,6 +64,7 @@ iframe {
 }
 .container-fluid > .content{
 	min-height:100%;
+	height:100%;
 	position:absolute;
 	right:0;
 	left:245px;

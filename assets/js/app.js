@@ -5,7 +5,7 @@
     docs_controller = new DocsController({
       container: $("#docsContainer")
     });
-    return docs_controller.loadConfig("data/cfmldoc.xml");
+    return docs_controller.loadConfig("data/cfml/toc.xml");
   });
 
 }).call(this);
