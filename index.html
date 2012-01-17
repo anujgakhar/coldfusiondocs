@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="author" content="Anuj Gakhar">
+  <link rel="stylesheet" href="assets/vendor/bootstrap.min.css" type="text/css" charset="utf-8">
+  <link rel="stylesheet" href="assets/css/application.css" type="text/css" charset="utf-8">
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/assets/vendor/jquery.min.js"><\/script>')</script>
+  <script type="text/javascript" src="assets/vendor/spin.min.js"></script>
+  <script type="text/javascript" src="assets/js/docs_controller.js"></script>
+  <script type="text/javascript" src="assets/js/app.js"></script>
+</head>
+  <body>
+	<div class="topbar">
+		<div class="topbar-inner">
+			<div class="container-fluid">
+				<a class="brand" href="#">ColdFusionDocs</a>
+				<div class="pull-right">
+					<ul class="nav">
+						<li><a href="#about">About</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid" id="docsContainer">
+			<div class="sidebar">
+				<div id="searchBox">
+					<input id="searchInput" type="text" size="20" class="large" name="search"/>
+				</div>	
+				<div id="docItemsContainer">
+					<ul id="docItems"></ul>
+				</div>	
+			</div>
+
+			<div class="content">
+				<div class="alert-message block-message error" id="errorPanel">
+					<p id="message">There has been an error!</p>
+				</div>
+				<div id="loadingPanel">
+					<h1 id="loadingLabel">Loading content...</h1>
+				</div>
+				
+				<div id="selectedItemDetails">
+					<iframe src="" width="100%" height="100%" frameborder="0" id="externalFrame"></iframe>
+				</div>
+			</div>
+	</div>
+  </body>
+</html>

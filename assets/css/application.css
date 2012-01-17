@@ -1,0 +1,78 @@
+body {
+   padding-top: 40px; 
+   background:#fff;
+}
+html, body { height: 100%;    overflow:hidden;}
+.container-fluid { min-height: 100%; margin:0px 0px; padding-right:0px;}
+.container-fluid > .sidebar, .container-fluid > .content {
+	padding: 0px 0 0 0px;
+}
+#searchBox{
+	background:#404040;
+	border:none;
+	padding:10px;
+	color:white;
+	margin:0px 0px 10px 0px;
+}
+.container-fluid > .sidebar {
+	background: #fff;
+	border-right:5px solid #404040;
+	left:0px;
+	width: 240px;
+}
+#docItemsContainer{
+	overflow:auto;
+	position:relative;
+}
+.container-fluid > .content {
+	background: #ffffff;
+	margin-left: 260px;
+	height:100%;
+}
+#loadingPanel {
+   background: rgba(255,255,255,0.75);
+   bottom: 0;
+   display: none;
+   left: 0;
+   position: absolute;
+   right: 0;
+   top: 0;
+   z-index: 4;
+}
+#loadingPanel #spinner {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+}
+#loadingPanel #loadingLabel {
+   color: #333;
+   font-size: 1em;
+   font-weight: bold;
+   left: 0;
+   line-height: 1.25em;
+   position: absolute;
+   right: 0;
+   top: 50%;
+   text-align: center;
+}
+.loading #loadingPanel {
+   display: block;
+}
+#errorPanel {
+   display: none;
+   left: 0;
+   position: absolute;
+   right: 0;
+   top: 0;
+   z-index: 101;
+   height:100px;
+   width:200px;	
+}
+.error #errorPanel {
+   display: block;
+   left: 45%;
+   top: 25%;
+}
+#errorPanel p{
+	font-weight:bold;
+}
