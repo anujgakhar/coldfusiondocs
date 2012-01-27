@@ -7,3 +7,6 @@
 html-template
 bin-debug
 
+
+*.tmproj
+data/cfml

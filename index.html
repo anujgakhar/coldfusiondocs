@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="author" content="Anuj Gakhar">
+  <title>ColdFusionDocs</title>
+  <link rel="stylesheet" href="assets/vendor/bootstrap.css" type="text/css" charset="utf-8">
+  <link rel="stylesheet" href="assets/css/application.css" type="text/css" charset="utf-8">
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/assets/vendor/jquery.min.js"><\/script>')</script>
+  <script type="text/javascript" src="assets/vendor/bootstrap-modal.js"></script>
+  <script type="text/javascript" src="assets/vendor/spin.min.js"></script>
+  <script type="text/javascript" src="assets/js/docs_controller.js"></script>
+  <script type="text/javascript" src="assets/js/app.js"></script>
+</head>
+  <body>
+	<div class="navbar navbar-fixed">
+		<div class="navbar-inner">
+			<div class="fluid-container">
+				<a class="brand" href="#">ColdFusionDocs</a>
+				<div class="pull-right">
+					<ul class="nav">
+						<li><a href="#about" data-toggle="modal">About</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="docsContainer">
+		<div class="fluid-container sidebar-left">
+			<div class="fluid-sidebar">
+				<div id="searchBox">
+					<input id="searchInput" type="search" size="20" class="large" name="search" placeholder="Search..."/>
+					Since : 
+					<label class="checkbox inline"><input type="checkbox" value="7" name="versionFilter">CF7</label>
+					<label class="checkbox inline"><input type="checkbox" value="8" name="versionFilter">CF8</label>
+					<label class="checkbox inline"><input type="checkbox" value="9" name="versionFilter">CF9</label>
+				</div>	
+
+				<div id="sideBarMiddle">
+					<div id="docItemsContainer">
+						<ul id="docItems" class="nav list"></ul>
+					</div>	
+				</div>
+			</div>
+
+			<div class="fluid-content">
+				<div class="alert alert-error" id="errorPanel">
+					<p id="message">There has been an error!</p>
+				</div>
+				<div id="loadingPanel">
+					<h1 id="loadingLabel">Loading content...</h1>
+				</div>
+		
+				<iframe src="" width="100%" height="100%" frameborder="0" id="externalFrame"></iframe>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer">
+		ColdFusionDocs.com
+	</div>
+	
+	<div id="about" class="modal hide fade">
+    	<div class="modal-header">
+    		<a class="close" data-dismiss="modal">×</a>
+    		<h3>About</h3>
+    	</div>
+    	<div class="modal-body">
+    		<p>ColdFusion Documentation - Built using CoffeeScript, jQuery, Bootstrap and LESS..</p>
+    	</div>
+    	<div class="modal-footer">
+    		<a href="#" class="btn" data-dismiss="modal">Close</a>
+    	</div>
+    </div>
+  </body>
+</html>
