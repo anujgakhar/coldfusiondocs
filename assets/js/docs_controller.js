@@ -21,7 +21,7 @@
       this.errorMessageOnXML = params.errorMessageOnXML || "Sorry! We cannot load the configuration XML.";
       this.configLoaded = false;
       this.configXML = "";
-      this.docsBasePath = "/data/cfml/docs/";
+      this.docsBasePath = "http://assets.coldfusiondocs.com/html/cf9/";
       this.selectedVersionFilter = [];
       this.fixHeight();
       this.showSpinner();
@@ -87,9 +87,8 @@
       return false;
     };
 
-    DocsController.prototype.loadConfig = function(url, docset) {
+    DocsController.prototype.loadConfig = function(url) {
       var _this = this;
-      if (docset == null) docset = 'acf';
       this.container.addClass(this.loadingClass);
       this.url = url;
       $.ajax({

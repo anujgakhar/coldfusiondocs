@@ -28,7 +28,7 @@ class @DocsController
     #Non-configurable attributes
     @configLoaded             = false
     @configXML                = ""
-    @docsBasePath             = "/data/cfml/docs/"
+    @docsBasePath             = "http://assets.coldfusiondocs.com/html/cf9/"
     @selectedVersionFilter    = []
 
     @fixHeight()
@@ -91,7 +91,7 @@ class @DocsController
     false     
 
 # Loads XML data for a supplied URL.
-  loadConfig: (url, docset = 'acf') ->
+  loadConfig: (url) ->
     @container.addClass(@loadingClass)
     @url = url
     $.ajax({
