@@ -3,7 +3,8 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="author" content="Anuj Gakhar">
-  <link rel="stylesheet" href="assets/vendor/bootstrap.min.css" type="text/css" charset="utf-8">
+  <title>ColdFusionDocs</title>
+  <link rel="stylesheet" href="assets/vendor/bootstrap.css" type="text/css" charset="utf-8">
   <link rel="stylesheet" href="assets/css/application.css" type="text/css" charset="utf-8">
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/assets/vendor/jquery.min.js"><\/script>')</script>
@@ -12,14 +13,13 @@
   <script type="text/javascript" src="assets/js/app.js"></script>
 </head>
   <body>
-	<div class="topbar">
-		<div class="topbar-inner">
-			<div class="container-fluid">
+	<div class="navbar navbar-fixed">
+		<div class="navbar-inner">
+			<div class="fluid-container">
 				<a class="brand" href="#">ColdFusionDocs</a>
 				<div class="pull-right">
 					<ul class="nav">
 						<li><a href="#about">About</a></li>
-						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -27,37 +27,31 @@
 	</div>
 	
 	<div id="docsContainer">
-		<div class="container-fluid">
-			<div class="sidebar">
+		<div class="fluid-container sidebar-left">
+			<div class="fluid-sidebar">
 				<div id="searchBox">
-					<input id="searchInput" type="text" size="20" class="large" name="search"/>
+					<input id="searchInput" type="search" size="20" class="large" name="search" placeholder="Search..."/>
 				</div>	
 
 				<div id="sideBarMiddle">
 					<div id="docItemsContainer">
-						<ul id="docItems" class="unstyled"></ul>
+						<ul id="docItems" class="nav list"></ul>
 					</div>	
 				</div>
 			</div>
 
-			<div class="content">
-				<div class="alert-message block-message error" id="errorPanel">
+			<div class="fluid-content">
+				<div class="alert alert-error" id="errorPanel">
 					<p id="message">There has been an error!</p>
 				</div>
 				<div id="loadingPanel">
 					<h1 id="loadingLabel">Loading content...</h1>
 				</div>
-				
-				<div id="acfContainer">
-					<iframe src="" width="100%" height="100%" frameborder="0" id="externalFrameACF"></iframe>
-				</div>	
-				
-				<div id="railoContainer">
-					<iframe src="" width="100%" height="100%" frameborder="0" id="externalFrameRailo"></iframe>
-				</div>
+		
+				<iframe src="http://yahoo.com" width="100%" height="100%" frameborder="0" id="externalFrame"></iframe>
 			</div>
 		</div>
-	</div>	
+	</div>
 	
 	<div id="footer">
 		ColdFusionDocs.com

@@ -11,8 +11,7 @@ class @DocsController
 	# Content Container
     @docItems                 = params.docItems            || @container.find("#docItems")
     @selectedItemDetails      = params.selectedItemDetails || @container.find("#selectedItemDetails")
-    @externalFrameACF         = params.externalFrameACF    || @container.find('#externalFrameACF')
-    @externalFrameRailo       = params.externalFrameRailo  || @container.find('#externalFrameRailo')
+    @externalFrame            = params.externalFrame       || @container.find('#externalFrame')
     @sideBarContentArea       = params.sideBarContentArea  || @container.find('#sideBarMiddle')
     @searchInput              = params.searchInput         || @container.find('#searchInput')
 
@@ -26,17 +25,16 @@ class @DocsController
     @errorMessageOnXML        = params.errorMessageOnXML   || "Sorry! We cannot load the configuration XML."
 
     #Non-configurable attributes
-    @acfConfigLoaded          = false
-    @railoConfigLoaded        = false
-    @acfConfigXML             = ""
-    @acfBasePath              = "/data/cfml/docs/"
-    @railoBasePath            = "http://assets.coldfusiondocs.com/html/railo/"
+    @configLoaded             = false
+    @configXML                = ""
+    @docsBasePath             = "/data/cfml/docs/"
 
     @fixHeight()
     @showSpinner()
 
     @searchInput.bind 'keyup change', ( =>
-      @filterResults() if @acfConfigLoaded && @searchInput.val().length > 2
+      if @configLoaded && (@searchInput.val().length > 2 || @searchInput.val().length == 0)
+        @filterResults() 
       false
     )
 
@@ -45,7 +43,7 @@ class @DocsController
     )
 
   fixHeight: ->
-    @sideBarContentArea.css('height', $(document).height() - 200)
+    @sideBarContentArea.css('height', $(document).height() - 205)
 
   showSpinner: ->
     # Configure and position spinner.
@@ -72,7 +70,7 @@ class @DocsController
 
   filterResults: ->
     @parseXML(@searchInput.val())
-    @searchImput.focus()
+    @searchInput.focus()
     false     
 
 # Loads XML data for a supplied URL.
@@ -87,17 +85,18 @@ class @DocsController
         complete: (jqXHR, textStatus) =>
            @removeSpinner()
         error: (jqXHR, textStatus, errorThrown) =>
+           @externalFrame.attr("src", "")
            @errorMessage.html(@errorMessageOnXML)
            @container.addClass(@errorClass)
         success: (data) =>
-           @acfConfigLoaded = true
-           @acfConfigXML = data
+           @configLoaded = true
+           @configXML    = data
            @parseXML()
     })
     false
 
   parseXML: (criteria = "") ->
-    @config_xml   = $(@acfConfigXML)
+    @config_xml   = $(@configXML)
     @topics       = @config_xml.find("topic")
 
     @docItems.find('li').remove()
@@ -125,16 +124,16 @@ class @DocsController
     )
 
     #force select first item
-    @handleItemClick(@docItems.find('li:first')) if criteria == ""
+    if criteria == "" && @docItems.find("li:first")
+      @handleItemClick(@docItems.find('li:first')) 
 
   handleItemClick: (obj = null) ->
     @showSpinner()
-    @docItems.find('li').removeClass("selected")
+    @docItems.find('li').removeClass("active")
     clickedListItem = $(obj)
     objectUrl = clickedListItem.attr("data-url").split("/")
     objectLabel = clickedListItem.attr("data-name") 
     fileName = objectUrl[objectUrl.length - 1]
-    @externalFrameACF.attr("src", @acfBasePath + fileName)
-    @externalFrameRailo.attr("src", @railoBasePath + 'tag_' + objectLabel + '.html')
-    clickedListItem.addClass("selected")
+    @externalFrame.attr("src", @docsBasePath + fileName)
+    clickedListItem.addClass("active")
     @removeSpinner()

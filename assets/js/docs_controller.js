@@ -10,8 +10,7 @@
       this.spinnerRadius = params.spinnerRadius || 10;
       this.docItems = params.docItems || this.container.find("#docItems");
       this.selectedItemDetails = params.selectedItemDetails || this.container.find("#selectedItemDetails");
-      this.externalFrameACF = params.externalFrameACF || this.container.find('#externalFrameACF');
-      this.externalFrameRailo = params.externalFrameRailo || this.container.find('#externalFrameRailo');
+      this.externalFrame = params.externalFrame || this.container.find('#externalFrame');
       this.sideBarContentArea = params.sideBarContentArea || this.container.find('#sideBarMiddle');
       this.searchInput = params.searchInput || this.container.find('#searchInput');
       this.loadingClass = params.loadingClass || "loading";
@@ -19,15 +18,13 @@
       this.errorPanel = params.errorFlash || this.container.find("#errorPanel");
       this.errorMessage = params.errorMessage || this.container.find("#message");
       this.errorMessageOnXML = params.errorMessageOnXML || "Sorry! We cannot load the configuration XML.";
-      this.acfConfigLoaded = false;
-      this.railoConfigLoaded = false;
-      this.acfConfigXML = "";
-      this.acfBasePath = "/data/cfml/docs/";
-      this.railoBasePath = "http://assets.coldfusiondocs.com/html/railo/";
+      this.configLoaded = false;
+      this.configXML = "";
+      this.docsBasePath = "/data/cfml/docs/";
       this.fixHeight();
       this.showSpinner();
       this.searchInput.bind('keyup change', (function() {
-        if (_this.acfConfigLoaded && _this.searchInput.val().length > 2) {
+        if (_this.configLoaded && (_this.searchInput.val().length > 2 || _this.searchInput.val().length === 0)) {
           _this.filterResults();
         }
         return false;
@@ -38,7 +35,7 @@
     }
 
     DocsController.prototype.fixHeight = function() {
-      return this.sideBarContentArea.css('height', $(document).height() - 200);
+      return this.sideBarContentArea.css('height', $(document).height() - 205);
     };
 
     DocsController.prototype.showSpinner = function() {
@@ -68,7 +65,7 @@
 
     DocsController.prototype.filterResults = function() {
       this.parseXML(this.searchInput.val());
-      this.searchImput.focus();
+      this.searchInput.focus();
       return false;
     };
 
@@ -86,12 +83,13 @@
           return _this.removeSpinner();
         },
         error: function(jqXHR, textStatus, errorThrown) {
+          _this.externalFrame.attr("src", "");
           _this.errorMessage.html(_this.errorMessageOnXML);
           return _this.container.addClass(_this.errorClass);
         },
         success: function(data) {
-          _this.acfConfigLoaded = true;
-          _this.acfConfigXML = data;
+          _this.configLoaded = true;
+          _this.configXML = data;
           return _this.parseXML();
         }
       });
@@ -102,7 +100,7 @@
       var current, href, index, listItem, topic, topicLabel, topicUrl, _i, _len, _ref,
         _this = this;
       if (criteria == null) criteria = "";
-      this.config_xml = $(this.acfConfigXML);
+      this.config_xml = $(this.configXML);
       this.topics = this.config_xml.find("topic");
       this.docItems.find('li').remove();
       this.docItems.find("a").unbind('click');
@@ -129,7 +127,7 @@
       this.docItems.find("a").click(function(event) {
         return _this.handleItemClick($(event.target).parent());
       });
-      if (criteria === "") {
+      if (criteria === "" && this.docItems.find("li:first")) {
         return this.handleItemClick(this.docItems.find('li:first'));
       }
     };
@@ -138,14 +136,13 @@
       var clickedListItem, fileName, objectLabel, objectUrl;
       if (obj == null) obj = null;
       this.showSpinner();
-      this.docItems.find('li').removeClass("selected");
+      this.docItems.find('li').removeClass("active");
       clickedListItem = $(obj);
       objectUrl = clickedListItem.attr("data-url").split("/");
       objectLabel = clickedListItem.attr("data-name");
       fileName = objectUrl[objectUrl.length - 1];
-      this.externalFrameACF.attr("src", this.acfBasePath + fileName);
-      this.externalFrameRailo.attr("src", this.railoBasePath + 'tag_' + objectLabel + '.html');
-      clickedListItem.addClass("selected");
+      this.externalFrame.attr("src", this.docsBasePath + fileName);
+      clickedListItem.addClass("active");
       return this.removeSpinner();
     };
 
