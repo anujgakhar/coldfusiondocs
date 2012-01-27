@@ -3,7 +3,7 @@ body {
    background:#fff;
 }
 html, body { height: 100%;    overflow:hidden;}
-iframe {
+iframe#externalFrame {
 	width:100%; 
 	border:none;
 	height:100%; 
