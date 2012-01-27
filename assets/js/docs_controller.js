@@ -152,14 +152,13 @@
     };
 
     DocsController.prototype.handleItemClick = function(obj) {
-      var clickedListItem, fileName, objectLabel, objectUrl;
+      var clickedListItem, fileName, topicUrl;
       if (obj == null) obj = null;
       this.showSpinner();
       this.docItems.find('li').removeClass("active");
       clickedListItem = $(obj);
-      objectUrl = clickedListItem.attr("data-url").split("/");
-      objectLabel = clickedListItem.attr("data-name");
-      fileName = objectUrl[objectUrl.length - 1];
+      topicUrl = clickedListItem.attr("data-url").split("/");
+      fileName = topicUrl[topicUrl.length - 1];
       this.externalFrame.attr("src", this.docsBasePath + fileName);
       clickedListItem.addClass("active");
       return this.removeSpinner();
