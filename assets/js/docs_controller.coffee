@@ -14,6 +14,7 @@ class @DocsController
     @externalFrame            = params.externalFrame       || @container.find('#externalFrame')
     @sideBarContentArea       = params.sideBarContentArea  || @container.find('#sideBarMiddle')
     @searchInput              = params.searchInput         || @container.find('#searchInput')
+    @versionFilter            = params.versionFilter       || @container.find("input:checkbox[name='versionFilter']")
 
     # Configurable CSS Classes
     @loadingClass             = params.loadingClass        || "loading"
@@ -28,6 +29,7 @@ class @DocsController
     @configLoaded             = false
     @configXML                = ""
     @docsBasePath             = "/data/cfml/docs/"
+    @selectedVersionFilter    = []
 
     @fixHeight()
     @showSpinner()
@@ -38,12 +40,25 @@ class @DocsController
       false
     )
 
+    @versionFilter.bind 'change', ( =>
+      @selectedVersionFilter = []
+      @versionFilter.each (index, element) =>
+        elem = $(element)
+        isChecked = if elem.prop('checked') then true else false
+        @saveVersionFilterState(elem.val(), isChecked) 
+      @filterResults()
+    )
+    
     $(window).resize( =>
       @fixHeight()
     )
 
+  saveVersionFilterState: (version, isChecked) ->
+    if isChecked  
+      @selectedVersionFilter.push version
+
   fixHeight: ->
-    @sideBarContentArea.css('height', $(document).height() - 205)
+    @sideBarContentArea.css('height', $(document).height() - 225)
 
   showSpinner: ->
     # Configure and position spinner.
@@ -69,7 +84,9 @@ class @DocsController
     $(@spinner.el).remove()
 
   filterResults: ->
-    @parseXML(@searchInput.val())
+    @criteria = @searchInput.val()
+    @docItems.find("li").hide()
+    @docItems.find("li[data-label*=" + @criteria + "][data-addedin*=" + @selectedVersionFilter.toString() + "]").show()
     @searchInput.focus()
     false     
 
@@ -107,11 +124,13 @@ class @DocsController
       current          = $(topic)
       topicLabel       = current.attr("label")
       topicUrl         = current.attr("href")
+      topicAddedIn     = current.attr("addedin") || "0"
       if criteria == "" || topicLabel.indexOf(criteria) != -1
         listItem         = $('<li/>')
         listItem.attr("data-index", index)
-        listItem.attr("data-name", topicLabel)
+        listItem.attr("data-label", topicLabel)
         listItem.attr("data-url", topicUrl)
+        listItem.attr("data-addedin", topicAddedIn)
         href             = $('<a/>')
         href.attr('class', 'docItem').attr('href','#')
         href.append(topicLabel) 

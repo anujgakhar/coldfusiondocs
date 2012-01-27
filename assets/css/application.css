@@ -47,6 +47,7 @@ iframe {
 	overflow:auto;
 	overflow-x:hidden;
 }
+label{color:#fff;}
 #docItemsContainer{margin-top:10px;}
 
 #loadingPanel {

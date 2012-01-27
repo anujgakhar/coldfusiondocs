@@ -13,6 +13,7 @@
       this.externalFrame = params.externalFrame || this.container.find('#externalFrame');
       this.sideBarContentArea = params.sideBarContentArea || this.container.find('#sideBarMiddle');
       this.searchInput = params.searchInput || this.container.find('#searchInput');
+      this.versionFilter = params.versionFilter || this.container.find("input:checkbox[name='versionFilter']");
       this.loadingClass = params.loadingClass || "loading";
       this.errorClass = params.errorClass || "error";
       this.errorPanel = params.errorFlash || this.container.find("#errorPanel");
@@ -21,6 +22,7 @@
       this.configLoaded = false;
       this.configXML = "";
       this.docsBasePath = "/data/cfml/docs/";
+      this.selectedVersionFilter = [];
       this.fixHeight();
       this.showSpinner();
       this.searchInput.bind('keyup change', (function() {
@@ -29,13 +31,27 @@
         }
         return false;
       }));
+      this.versionFilter.bind('change', (function() {
+        _this.selectedVersionFilter = [];
+        _this.versionFilter.each(function(index, element) {
+          var elem, isChecked;
+          elem = $(element);
+          isChecked = elem.prop('checked') ? true : false;
+          return _this.saveVersionFilterState(elem.val(), isChecked);
+        });
+        return _this.filterResults();
+      }));
       $(window).resize(function() {
         return _this.fixHeight();
       });
     }
 
+    DocsController.prototype.saveVersionFilterState = function(version, isChecked) {
+      if (isChecked) return this.selectedVersionFilter.push(version);
+    };
+
     DocsController.prototype.fixHeight = function() {
-      return this.sideBarContentArea.css('height', $(document).height() - 205);
+      return this.sideBarContentArea.css('height', $(document).height() - 225);
     };
 
     DocsController.prototype.showSpinner = function() {
@@ -64,7 +80,9 @@
     };
 
     DocsController.prototype.filterResults = function() {
-      this.parseXML(this.searchInput.val());
+      this.criteria = this.searchInput.val();
+      this.docItems.find("li").hide();
+      this.docItems.find("li[data-label*=" + this.criteria + "][data-addedin*=" + this.selectedVersionFilter.toString() + "]").show();
       this.searchInput.focus();
       return false;
     };
@@ -97,7 +115,7 @@
     };
 
     DocsController.prototype.parseXML = function(criteria) {
-      var current, href, index, listItem, topic, topicLabel, topicUrl, _i, _len, _ref,
+      var current, href, index, listItem, topic, topicAddedIn, topicLabel, topicUrl, _i, _len, _ref,
         _this = this;
       if (criteria == null) criteria = "";
       this.config_xml = $(this.configXML);
@@ -111,11 +129,13 @@
         current = $(topic);
         topicLabel = current.attr("label");
         topicUrl = current.attr("href");
+        topicAddedIn = current.attr("addedin") || "0";
         if (criteria === "" || topicLabel.indexOf(criteria) !== -1) {
           listItem = $('<li/>');
           listItem.attr("data-index", index);
-          listItem.attr("data-name", topicLabel);
+          listItem.attr("data-label", topicLabel);
           listItem.attr("data-url", topicUrl);
+          listItem.attr("data-addedin", topicAddedIn);
           href = $('<a/>');
           href.attr('class', 'docItem').attr('href', '#');
           href.append(topicLabel);
