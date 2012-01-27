@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="assets/css/application.css" type="text/css" charset="utf-8">
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/assets/vendor/jquery.min.js"><\/script>')</script>
+  <script type="text/javascript" src="assets/vendor/bootstrap-modal.js"></script>
   <script type="text/javascript" src="assets/vendor/spin.min.js"></script>
   <script type="text/javascript" src="assets/js/docs_controller.js"></script>
   <script type="text/javascript" src="assets/js/app.js"></script>
@@ -19,7 +20,7 @@
 				<a class="brand" href="#">ColdFusionDocs</a>
 				<div class="pull-right">
 					<ul class="nav">
-						<li><a href="#about">About</a></li>
+						<li><a href="#about" data-toggle="modal">About</a></li>
 					</ul>
 				</div>
 			</div>
@@ -52,13 +53,26 @@
 					<h1 id="loadingLabel">Loading content...</h1>
 				</div>
 		
-				<iframe src="http://yahoo.com" width="100%" height="100%" frameborder="0" id="externalFrame"></iframe>
+				<iframe src="" width="100%" height="100%" frameborder="0" id="externalFrame"></iframe>
 			</div>
 		</div>
 	</div>
-	
+
 	<div id="footer">
 		ColdFusionDocs.com
 	</div>
+	
+	<div id="about" class="modal hide fade">
+    	<div class="modal-header">
+    		<a class="close" data-dismiss="modal">×</a>
+    		<h3>About</h3>
+    	</div>
+    	<div class="modal-body">
+    		<p>ColdFusion Documentation - Built using CoffeeScript, jQuery, Bootstrap and LESS..</p>
+    	</div>
+    	<div class="modal-footer">
+    		<a href="#" class="btn" data-dismiss="modal">Close</a>
+    	</div>
+    </div>
   </body>
 </html>
