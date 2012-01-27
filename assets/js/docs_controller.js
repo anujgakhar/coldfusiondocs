@@ -3,8 +3,7 @@
   this.DocsController = (function() {
 
     function DocsController(params) {
-      var spinnerElement,
-        _this = this;
+      var _this = this;
       if (params == null) params = {};
       this.container = params.container || $("#docsContainer");
       this.loadingPanel = params.loadingPanel || this.container.find("#loadingPanel");
@@ -14,15 +13,49 @@
       this.externalFrame = params.externalFrame || this.container.find('#externalFrame');
       this.sideBarContentArea = params.sideBarContentArea || this.container.find('#sideBarMiddle');
       this.searchInput = params.searchInput || this.container.find('#searchInput');
+      this.versionFilter = params.versionFilter || this.container.find("input:checkbox[name='versionFilter']");
       this.loadingClass = params.loadingClass || "loading";
       this.errorClass = params.errorClass || "error";
       this.errorPanel = params.errorFlash || this.container.find("#errorPanel");
       this.errorMessage = params.errorMessage || this.container.find("#message");
       this.errorMessageOnXML = params.errorMessageOnXML || "Sorry! We cannot load the configuration XML.";
-      this.acfConfigLoaded = false;
-      this.railoConfigLoaded = false;
-      this.acfConfigXML = "";
-      this.acfBasePath = "http://assets.coldfusiondocs.com/html/cfml/";
+      this.configLoaded = false;
+      this.configXML = "";
+      this.docsBasePath = "/data/cfml/docs/";
+      this.selectedVersionFilter = [];
+      this.fixHeight();
+      this.showSpinner();
+      this.searchInput.bind('keyup change', (function() {
+        if (_this.configLoaded && (_this.searchInput.val().length > 2 || _this.searchInput.val().length === 0)) {
+          _this.filterResults();
+        }
+        return false;
+      }));
+      this.versionFilter.bind('change', (function() {
+        _this.selectedVersionFilter = [];
+        _this.versionFilter.each(function(index, element) {
+          var elem, isChecked;
+          elem = $(element);
+          isChecked = elem.prop('checked') ? true : false;
+          return _this.saveVersionFilterState(elem.val(), isChecked);
+        });
+        return _this.filterResults();
+      }));
+      $(window).resize(function() {
+        return _this.fixHeight();
+      });
+    }
+
+    DocsController.prototype.saveVersionFilterState = function(version, isChecked) {
+      if (isChecked) return this.selectedVersionFilter.push(version);
+    };
+
+    DocsController.prototype.fixHeight = function() {
+      return this.sideBarContentArea.css('height', $(document).height() - 225);
+    };
+
+    DocsController.prototype.showSpinner = function() {
+      var spinnerElement;
       this.spinner = new Spinner({
         lines: 12,
         length: 7,
@@ -38,21 +71,25 @@
       spinnerElement.css("margin-top", "" + (-this.spinnerRadius * 4) + "px");
       spinnerElement.css("margin-left", "" + (-this.spinnerRadius) + "px");
       spinnerElement.css("position", "absolute");
-      this.loadingPanel.append(this.spinner.el);
-      this.sideBarContentArea.css('height', $(document).height() - 199);
-      this.searchInput.bind('keyup mouseup change', (function() {
-        if (_this.acfConfigLoaded) _this.filterResults();
-        return false;
-      }));
-    }
+      return this.loadingPanel.append(this.spinner.el);
+    };
+
+    DocsController.prototype.removeSpinner = function() {
+      this.container.removeClass(this.loadingClass);
+      return $(this.spinner.el).remove();
+    };
 
     DocsController.prototype.filterResults = function() {
-      this.parseXML(this.searchInput.val());
+      this.criteria = this.searchInput.val();
+      this.docItems.find("li").hide();
+      this.docItems.find("li[data-label*=" + this.criteria + "][data-addedin*=" + this.selectedVersionFilter.toString() + "]").show();
+      this.searchInput.focus();
       return false;
     };
 
-    DocsController.prototype.loadConfig = function(url) {
+    DocsController.prototype.loadConfig = function(url, docset) {
       var _this = this;
+      if (docset == null) docset = 'acf';
       this.container.addClass(this.loadingClass);
       this.url = url;
       $.ajax({
@@ -64,12 +101,13 @@
           return _this.removeSpinner();
         },
         error: function(jqXHR, textStatus, errorThrown) {
+          _this.externalFrame.attr("src", "");
           _this.errorMessage.html(_this.errorMessageOnXML);
           return _this.container.addClass(_this.errorClass);
         },
         success: function(data) {
-          _this.acfConfigLoaded = true;
-          _this.acfConfigXML = data;
+          _this.configLoaded = true;
+          _this.configXML = data;
           return _this.parseXML();
         }
       });
@@ -77,45 +115,55 @@
     };
 
     DocsController.prototype.parseXML = function(criteria) {
-      var current, docUrl, href, index, listItem, obj, objName, _i, _len, _ref,
+      var current, href, index, listItem, topic, topicAddedIn, topicLabel, topicUrl, _i, _len, _ref,
         _this = this;
       if (criteria == null) criteria = "";
-      this.config_xml = $(this.acfConfigXML);
-      this.objects = this.config_xml.find("object");
+      this.config_xml = $(this.configXML);
+      this.topics = this.config_xml.find("topic");
       this.docItems.find('li').remove();
+      this.docItems.find("a").unbind('click');
       index = 0;
-      _ref = this.objects;
+      _ref = this.topics;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        obj = _ref[_i];
-        current = $(obj);
-        objName = current.attr("name");
-        docUrl = current.find("docURL").text();
-        if (criteria === "" || objName.indexOf(criteria) !== -1) {
+        topic = _ref[_i];
+        current = $(topic);
+        topicLabel = current.attr("label");
+        topicUrl = current.attr("href");
+        topicAddedIn = current.attr("addedin") || "0";
+        if (criteria === "" || topicLabel.indexOf(criteria) !== -1) {
           listItem = $('<li/>');
           listItem.attr("data-index", index);
-          listItem.attr("data-name", objName);
-          listItem.attr("data-url", docUrl);
+          listItem.attr("data-label", topicLabel);
+          listItem.attr("data-url", topicUrl);
+          listItem.attr("data-addedin", topicAddedIn);
           href = $('<a/>');
           href.attr('class', 'docItem').attr('href', '#');
-          href.bind('click', this.listItemClick);
-          href.append(objName);
+          href.append(topicLabel);
           listItem.append(href);
           this.docItems.append(listItem);
           index += 1;
         }
       }
-      return this.docItems.find("a").click(function(event) {
-        var clickedListItem, fileName, objectUrl;
-        clickedListItem = $(event.target).parent();
-        objectUrl = clickedListItem.attr("data-url").split("/");
-        fileName = objectUrl[objectUrl.length - 1];
-        return _this.externalFrame.attr("src", _this.acfBasePath + fileName);
+      this.docItems.find("a").click(function(event) {
+        return _this.handleItemClick($(event.target).parent());
       });
+      if (criteria === "" && this.docItems.find("li:first")) {
+        return this.handleItemClick(this.docItems.find('li:first'));
+      }
     };
 
-    DocsController.prototype.removeSpinner = function() {
-      this.container.removeClass(this.loadingClass);
-      return $(this.spinner.el).remove();
+    DocsController.prototype.handleItemClick = function(obj) {
+      var clickedListItem, fileName, objectLabel, objectUrl;
+      if (obj == null) obj = null;
+      this.showSpinner();
+      this.docItems.find('li').removeClass("active");
+      clickedListItem = $(obj);
+      objectUrl = clickedListItem.attr("data-url").split("/");
+      objectLabel = clickedListItem.attr("data-name");
+      fileName = objectUrl[objectUrl.length - 1];
+      this.externalFrame.attr("src", this.docsBasePath + fileName);
+      clickedListItem.addClass("active");
+      return this.removeSpinner();
     };
 
     return DocsController;
