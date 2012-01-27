@@ -150,9 +150,8 @@ class @DocsController
     @showSpinner()
     @docItems.find('li').removeClass("active")
     clickedListItem = $(obj)
-    objectUrl = clickedListItem.attr("data-url").split("/")
-    objectLabel = clickedListItem.attr("data-name") 
-    fileName = objectUrl[objectUrl.length - 1]
+    topicUrl = clickedListItem.attr("data-url").split("/")
+    fileName = topicUrl[topicUrl.length - 1]
     @externalFrame.attr("src", @docsBasePath + fileName)
     clickedListItem.addClass("active")
     @removeSpinner()
