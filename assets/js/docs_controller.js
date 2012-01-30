@@ -80,10 +80,21 @@
     };
 
     DocsController.prototype.filterResults = function() {
-      this.criteria = this.searchInput.val();
+      var vFilter, _i, _len, _ref;
       this.docItems.find("li").hide();
-      this.docItems.find("li[data-label*=" + this.criteria + "][data-addedin*=" + this.selectedVersionFilter.toString() + "]").show();
-      this.searchInput.focus();
+      this.filters = [];
+      this.searchCriteria = "li[data-label*=" + this.searchInput.val() + "]";
+      _ref = this.selectedVersionFilter;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        vFilter = _ref[_i];
+        this.searchString = this.searchCriteria;
+        this.searchString = this.searchString.concat("[data-addedin=" + vFilter + "]");
+        this.filters.push(this.searchString);
+      }
+      if (this.selectedVersionFilter.length === 0) {
+        this.filters.push(this.searchCriteria);
+      }
+      this.docItems.find(this.filters.join(",")).show();
       return false;
     };
 

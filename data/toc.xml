@@ -21,8 +21,8 @@
 	         <topic label="Tag changes since ColdFusion 5" href="docs/WSc3ff6d0ea77859461172e0811cbec17576-7fef.html"/>
 	         <topic label="Tags a-b" href="docs/WSc3ff6d0ea77859461172e0811cbec176af-7fe8.html">
 	            <topic label="cfabort" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7fde.html"/>
-	            <topic label="cfajaximport" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79fe.html"/>
-	            <topic label="cfajaxproxy" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79f9.html"/>
+	            <topic label="cfajaximport" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79fe.html" addedin="8"/>
+	            <topic label="cfajaxproxy" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79f9.html" addedin="8"/>
 	            <topic label="cfapplet" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7afc.html"/>
 	            <topic label="cfapplication" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7d69.html"/>
 	            <topic label="cfargument" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7e47.html"/>
@@ -46,10 +46,10 @@
 	            <topic label="cfcookie" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f5f.html"/>
 	         </topic>
 	         <topic label="Tags d-e" href="docs/WSc3ff6d0ea77859461172e0811cbec17cba-8000.html">
-	            <topic label="cfdbinfo" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7685.html"/>
+	            <topic label="cfdbinfo" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7685.html" addedin="8"/>
 	            <topic label="cfdefaultcase" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7fe3.html"/>
 	            <topic label="cfdirectory" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f99.html"/>
-	            <topic label="cfdiv" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7a07.html"/>
+	            <topic label="cfdiv" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7a07.html" addedin="8"/>
 	            <topic label="cfdocument" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c21.html"/>
 	            <topic label="cfdocumentitem" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7758.html"/>
 	            <topic label="cfdocumentsection" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-791a.html"/>
@@ -57,17 +57,17 @@
 	            <topic label="cfelse" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7fe6.html"/>
 	            <topic label="cfelseif" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7fe7.html"/>
 	            <topic label="cferror" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7d29.html"/>
-	            <topic label="cfexchangecalendar" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-782c.html"/>
-	            <topic label="cfexchangeconnection" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-782d.html"/>
-	            <topic label="cfexchangecontact" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7828.html"/>
-	            <topic label="cfexchangefilter" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-767a.html"/>
-	            <topic label="cfexchangemail" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7821.html"/>
-	            <topic label="cfexchangetask" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7827.html"/>
+	            <topic label="cfexchangecalendar" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-782c.html" addedin="8"/>
+	            <topic label="cfexchangeconnection" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-782d.html" addedin="8"/>
+	            <topic label="cfexchangecontact" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7828.html" addedin="8"/>
+	            <topic label="cfexchangefilter" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-767a.html" addedin="8"/>
+	            <topic label="cfexchangemail" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7821.html" addedin="8"/>
+	            <topic label="cfexchangetask" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7827.html" addedin="8"/>
 	            <topic label="cfexecute" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7d56.html"/>
 	            <topic label="cfexit" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7fdd.html"/>
 	         </topic>
 	         <topic label="Tags f" href="docs/WSc3ff6d0ea77859461172e0811cbec18238-7fb4.html">
-	            <topic label="cffeed" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7675.html"/>
+	            <topic label="cffeed" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7675.html" addedin="8"/>
 	            <topic label="cffile" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7fa1.html"/>
 	            <topic label="cffile action = &#34;append&#34;" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7371.html"/>
 	            <topic label="cffile action = &#34;copy&#34;" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7376.html"/>
@@ -106,7 +106,7 @@
 	         </topic>
 	         <topic label="Tags i" href="docs/WSc3ff6d0ea77859461172e0811cbec18a66-8000.html">
 	            <topic label="cfif" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7fe8.html"/>
-	            <topic label="cfimage" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7945.html"/>
+	            <topic label="cfimage" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7945.html" addedin="8"/>
 	            <topic label="cfimap" href="docs/WS371453EC-36D5-44ce-BF1E-750E3016BBD6.html" addedin="9"/>
 	            <topic label="cfimpersonate" href="docs/WSc3ff6d0ea77859461172e0811cbec18a66-7fea.html"/>
 	            <topic label="cfimport" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7ea1.html"/>
@@ -114,13 +114,13 @@
 	            <topic label="cfindex" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7d04.html"/>
 	            <topic label="cfinput" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f51.html"/>
 	            <topic label="cfinsert" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c78.html"/>
-	            <topic label="cfinterface" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7715.html"/>
+	            <topic label="cfinterface" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7715.html" addedin="8"/>
 	            <topic label="cfinvoke" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7e0a.html"/>
 	            <topic label="cfinvokeargument" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7e09.html"/>
 	         </topic>
 	         <topic label="Tags j-l" href="docs/WSc3ff6d0ea77859461172e0811cbec18db1-7ffe.html">
-	            <topic label="cflayout" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7a22.html"/>
-	            <topic label="cflayoutarea" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7a23.html"/>
+	            <topic label="cflayout" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7a22.html" addedin="8"/>
+	            <topic label="cflayoutarea" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7a23.html" addedin="8"/>
 	            <topic label="cfldap" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f97.html"/>
 	            <topic label="cflocation" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7cac.html"/>
 	            <topic label="cflock" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f5d.html"/>
@@ -159,18 +159,18 @@
 	            <topic label="cfoutput" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7ff6.html"/>
 	         </topic>
 	         <topic label="Tags p-q" href="docs/WSc3ff6d0ea77859461172e0811cbec19562-7f72.html">
-	            <topic label="cfparam" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7faf.html"/>
+	            <topic label="cfparam" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7faf.html" />
 	            <topic label="cfpdf" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7995.html"/>
-	            <topic label="cfpdfform" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-798d.html"/>
-	            <topic label="cfpdfformparam" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-76ea.html"/>
-	            <topic label="cfpdfparam" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-763e.html"/>
-	            <topic label="cfpdfsubform" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-76e8.html"/>
-	            <topic label="cfpod" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7a06.html"/>
+	            <topic label="cfpdfform" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-798d.html" addedin="8"/>
+	            <topic label="cfpdfformparam" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-76ea.html" addedin="8"/>
+	            <topic label="cfpdfparam" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-763e.html" addedin="8"/>
+	            <topic label="cfpdfsubform" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-76e8.html" addedin="8"/>
+	            <topic label="cfpod" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7a06.html" addedin="8"/>
 	            <topic label="cfpop" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f96.html"/>
-	            <topic label="cfpresentation" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7910.html"/>
-	            <topic label="cfpresentationslide" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-790f.html"/>
-	            <topic label="cfpresenter" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-790e.html"/>
-	            <topic label="cfprint" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7996.html"/>
+	            <topic label="cfpresentation" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7910.html" addedin="8"/>
+	            <topic label="cfpresentationslide" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-790f.html" addedin="8"/>
+	            <topic label="cfpresenter" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-790e.html" addedin="8"/>
+	            <topic label="cfprint" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7996.html" addedin="8"/>
 	            <topic label="cfprocessingdirective" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-76de.html"/>
 	            <topic label="cfprocparam" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7d52.html"/>
 	            <topic label="cfprocresult" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f95.html"/>
@@ -198,7 +198,7 @@
 	            <topic label="cfslider" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7aed.html"/>
 	            <topic label="cfsilent" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7bf3.html"/>
 	            <topic label="cfspreadsheet" href="docs/WSc3ff6d0ea77859461172e0811cbec17cba-7f87.html" addedin="9"/>
-	            <topic label="cfsprydataset" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79ec.html"/>
+	            <topic label="cfsprydataset" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79ec.html" addedin="8"/>
 	            <topic label="cfstoredproc" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7d55.html"/>
 	            <topic label="cfswitch" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7fe5.html"/>
 	         </topic>
@@ -206,10 +206,10 @@
 	            <topic label="cftable" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7be3.html"/>
 	            <topic label="cftextarea" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7afd.html"/>
 	            <topic label="cftextinput" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7e7e.html"/>
-	            <topic label="cfthread" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-75a8.html"/>
+	            <topic label="cfthread" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-75a8.html" addedin="8"/>
 	            <topic label="cfthrow" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7e25.html"/>
 	            <topic label="cftimer" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7bde.html"/>
-	            <topic label="cftooltip" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79d0.html"/>
+	            <topic label="cftooltip" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79d0.html" addedin="8"/>
 	            <topic label="cftrace" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c00.html"/>
 	            <topic label="cftransaction" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c6b.html"/>
 	            <topic label="cftree" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7d84.html"/>
@@ -219,10 +219,10 @@
 	         <topic label="Tags u-z" href="docs/WSc3ff6d0ea77859461172e0811cbec1a3d9-8000.html">
 	            <topic label="cfupdate" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c6a.html"/>
 	            <topic label="cfwddx" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7ca6.html"/>
-	            <topic label="cfwindow" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79e6.html"/>
+	            <topic label="cfwindow" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79e6.html" addedin="8"/>
 	            <topic label="cfxml" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7697.html"/>
-	            <topic label="cfzip" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7695.html"/>
-	            <topic label="cfzipparam" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7693.html"/>
+	            <topic label="cfzip" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7695.html" addedin="8"/>
+	            <topic label="cfzipparam" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7693.html" addedin="8"/>
 	         </topic>
 	      </topic>
 	      <topic label="ColdFusion Functions" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7ff8.html">
@@ -238,8 +238,8 @@
 	            <topic label="ACos" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d3d.html"/>
 	            <topic label="AddSOAPRequestHeader" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6c84.html"/>
 	            <topic label="AddSOAPResponseHeader" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6c83.html"/>
-	            <topic label="AjaxLink" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79ce.html"/>
-	            <topic label="AjaxOnLoad" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79e1.html"/>
+	            <topic label="AjaxLink" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79ce.html" addedin="8"/>
+	            <topic label="AjaxOnLoad" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79e1.html" addedin="8"/>
 	            <topic label="ApplicationStop" href="docs/WSfd7453be0f56bba4-6559a36612308c9266a-8000.html" addedin="9"/>
 	            <topic label="ArrayAppend" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f21.html"/>
 	            <topic label="ArrayAvg" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f20.html"/>
@@ -281,14 +281,14 @@
 	            <topic label="BitXor" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d30.html"/>
 	         </topic>
 	         <topic label="Functions c-d" href="docs/WSc3ff6d0ea77859461172e0811cbec1b05d-7fe1.html">
-	            <topic label="CacheGet" href="docs/WSc3ff6d0ea77859461172e0811cbec1b05d-7fe0.html"/>
-	            <topic label="CacheGetAllIds" href="docs/WSc3ff6d0ea77859461172e0811cbec1bb49-7ffd.html"/>
-	            <topic label="CacheGetMetadata" href="docs/WSc3ff6d0ea77859461172e0811cbec1bb49-7fc4.html"/>
-	            <topic label="CacheGetProperties" href="docs/WSc3ff6d0ea77859461172e0811cbec1bb49-7ed3.html"/>
-	            <topic label="cacheGetSession" href="docs/WSd160b5fdf5100e8f-7018704d129d9eeda9f-8000.html"/>
-	            <topic label="CachePut" href="docs/WSc3ff6d0ea77859461172e0811cbec1b05d-7fd5.html"/>
-	            <topic label="CacheRemove" href="docs/WSc3ff6d0ea77859461172e0811cbec1f1ac-7fd8.html"/>
-	            <topic label="CacheSetProperties" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c18.html"/>
+	            <topic label="CacheGet" href="docs/WSc3ff6d0ea77859461172e0811cbec1b05d-7fe0.html" addedin="9"/>
+	            <topic label="CacheGetAllIds" href="docs/WSc3ff6d0ea77859461172e0811cbec1bb49-7ffd.html" addedin="9"/>
+	            <topic label="CacheGetMetadata" href="docs/WSc3ff6d0ea77859461172e0811cbec1bb49-7fc4.html" addedin="9"/>
+	            <topic label="CacheGetProperties" href="docs/WSc3ff6d0ea77859461172e0811cbec1bb49-7ed3.html" addedin="9"/>
+	            <topic label="cacheGetSession" href="docs/WSd160b5fdf5100e8f-7018704d129d9eeda9f-8000.html" addedin="9"/>
+	            <topic label="CachePut" href="docs/WSc3ff6d0ea77859461172e0811cbec1b05d-7fd5.html" addedin="9"/>
+	            <topic label="CacheRemove" href="docs/WSc3ff6d0ea77859461172e0811cbec1f1ac-7fd8.html" addedin="9"/>
+	            <topic label="CacheSetProperties" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c18.html" addedin="9"/>
 	            <topic label="Ceiling" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f86.html"/>
 	            <topic label="CharsetDecode" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f64.html"/>
 	            <topic label="CharsetEncode" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f63.html"/>
@@ -330,50 +330,50 @@
 	            <topic label="Decrypt" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c1c.html"/>
 	            <topic label="DecryptBinary" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e77.html"/>
 	            <topic label="DeleteClientVariable" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7ca2.html"/>
-	            <topic label="DeserializeJSON" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79e4.html"/>
-	            <topic label="DirectoryCreate" href="docs/WSce19a0e5a003e2edfa09972122fa66a2e8-8000.html"/>
-	            <topic label="DirectoryDelete" href="docs/WSce19a0e5a003e2edfa09972122fa66a2e8-7fff.html"/>
-	            <topic label="DirectoryExists" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c68.html"/>
-	            <topic label="DirectoryList" href="docs/WSce19a0e5a003e2edfa09972122fa66a2e8-7ffe.html"/>
-	            <topic label="DirectoryRename" href="docs/WSce19a0e5a003e2edfa09972122fa66a2e8-7ffd.html"/>
+	            <topic label="DeserializeJSON" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79e4.html" addedin="8"/>
+	            <topic label="DirectoryCreate" href="docs/WSce19a0e5a003e2edfa09972122fa66a2e8-8000.html" addedin="9"/>
+	            <topic label="DirectoryDelete" href="docs/WSce19a0e5a003e2edfa09972122fa66a2e8-7fff.html" addedin="9"/>
+	            <topic label="DirectoryExists" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c68.html" addedin="9"/>
+	            <topic label="DirectoryList" href="docs/WSce19a0e5a003e2edfa09972122fa66a2e8-7ffe.html" addedin="9"/>
+	            <topic label="DirectoryRename" href="docs/WSce19a0e5a003e2edfa09972122fa66a2e8-7ffd.html" addedin="9"/>
 	            <topic label="DollarFormat" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7b05.html"/>
-	            <topic label="DotNetToCFType" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7890.html"/>
+	            <topic label="DotNetToCFType" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7890.html" addedin="8"/>
 	            <topic label="Duplicate" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f9b.html"/>
 	         </topic>
 	         <topic label="Functions e-g" href="docs/WSc3ff6d0ea77859461172e0811cbec1bb49-7d63.html">
 	            <topic label="Encrypt" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c2f.html"/>
 	            <topic label="EncryptBinary" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e75.html"/>
-	            <topic label="EntityDelete" href="docs/WSC99B2536-9412-4de2-8DE5-34CEBFFF4E93.html"/>
-	            <topic label="EntityLoad" href="docs/WS32C28934-CDCE-497f-8212-6342141C5846.html"/>
-	            <topic label="EntityLoadByExample" href="docs/WS02795ED4-C939-4961-A647-D04080799542.html"/>
-	            <topic label="EntityLoadByPK" href="docs/WSfd7453be0f56bba437188258123092b394c-8000.html"/>
-	            <topic label="EntityMerge" href="docs/WSfd7453be0f56bba437188258123092b394c-7fff.html"/>
-	            <topic label="EntityNew" href="docs/WSfd7453be0f56bba437188258123092b394c-7ffe.html"/>
-	            <topic label="EntityReload" href="docs/WS4479DB39-3571-47c4-BF02-64C2E91B8576.html"/>
-	            <topic label="EntitySave" href="docs/WS89F68C3F-0F5F-4c1b-88C4-4299A1E7F28A.html"/>
-	            <topic label="EntitytoQuery" href="docs/WSfd7453be0f56bba437188258123092b394c-7ffd.html"/>
+	            <topic label="EntityDelete" href="docs/WSC99B2536-9412-4de2-8DE5-34CEBFFF4E93.html" addedin="9"/>
+	            <topic label="EntityLoad" href="docs/WS32C28934-CDCE-497f-8212-6342141C5846.html" addedin="9"/>
+	            <topic label="EntityLoadByExample" href="docs/WS02795ED4-C939-4961-A647-D04080799542.html" addedin="9"/>
+	            <topic label="EntityLoadByPK" href="docs/WSfd7453be0f56bba437188258123092b394c-8000.html" addedin="9"/>
+	            <topic label="EntityMerge" href="docs/WSfd7453be0f56bba437188258123092b394c-7fff.html" addedin="9"/>
+	            <topic label="EntityNew" href="docs/WSfd7453be0f56bba437188258123092b394c-7ffe.html" addedin="9"/>
+	            <topic label="EntityReload" href="docs/WS4479DB39-3571-47c4-BF02-64C2E91B8576.html" addedin="9"/>
+	            <topic label="EntitySave" href="docs/WS89F68C3F-0F5F-4c1b-88C4-4299A1E7F28A.html" addedin="9"/>
+	            <topic label="EntitytoQuery" href="docs/WSfd7453be0f56bba437188258123092b394c-7ffd.html" addedin="9"/>
 	            <topic label="Evaluate" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f4e.html"/>
 	            <topic label="Exp" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d21.html"/>
 	            <topic label="ExpandPath" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c67.html"/>
-	            <topic label="FileClose" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6da1.html"/>
-	            <topic label="FileCopy" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6da0.html"/>
-	            <topic label="FileDelete" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d9f.html"/>
+	            <topic label="FileClose" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6da1.html" addedin="8"/>
+	            <topic label="FileCopy" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6da0.html" addedin="8"/>
+	            <topic label="FileDelete" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d9f.html" addedin="8"/>
 	            <topic label="FileExists" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c66.html"/>
-	            <topic label="FileIsEOF" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6dc8.html"/>
-	            <topic label="FileMove" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d9d.html"/>
-	            <topic label="FileOpen" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d9c.html"/>
-	            <topic label="FileRead" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d68.html"/>
-	            <topic label="FileReadBinary" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d66.html"/>
-	            <topic label="FileReadLine" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d46.html"/>
-	            <topic label="FileSeek" href="docs/WSe9cbe5cf462523a0693fe51b122efd48f99-8000.html"/>
-	            <topic label="FileSetAccessMode" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6cfd.html"/>
-	            <topic label="FileSetAttribute" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d00.html"/>
-	            <topic label="FileSetLastModified" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6ce1.html"/>
-	            <topic label="FileSkipBytes" href="docs/WSe9cbe5cf462523a0-7ed5a1d6122efcf26ef-8000.html"/>
-	            <topic label="FileUpload" href="docs/WSd160b5fdf5100e8f36f73035129d9e70a92-8000.html"/>
-	            <topic label="FileUploadAll" href="docs/WSd160b5fdf5100e8f36f73035129d9e70a92-7fff.html"/>
-	            <topic label="FileWrite" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6cdf.html"/>
-	            <topic label="FileWriteLine" href="docs/WSc3ff6d0ea77859461172e0811cbec1bb49-7f44.html"/>
+	            <topic label="FileIsEOF" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6dc8.html" addedin="8"/>
+	            <topic label="FileMove" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d9d.html" addedin="8"/>
+	            <topic label="FileOpen" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d9c.html" addedin="8"/>
+	            <topic label="FileRead" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d68.html" addedin="8"/>
+	            <topic label="FileReadBinary" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d66.html" addedin="8"/>
+	            <topic label="FileReadLine" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d46.html" addedin="8"/>
+	            <topic label="FileSeek" href="docs/WSe9cbe5cf462523a0693fe51b122efd48f99-8000.html" addedin="9"/>
+	            <topic label="FileSetAccessMode" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6cfd.html" addedin="8"/>
+	            <topic label="FileSetAttribute" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d00.html" addedin="8"/>
+	            <topic label="FileSetLastModified" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6ce1.html" addedin="8"/>
+	            <topic label="FileSkipBytes" href="docs/WSe9cbe5cf462523a0-7ed5a1d6122efcf26ef-8000.html" addedin="9"/>
+	            <topic label="FileUpload" href="docs/WSd160b5fdf5100e8f36f73035129d9e70a92-8000.html" addedin="9"/>
+	            <topic label="FileUploadAll" href="docs/WSd160b5fdf5100e8f36f73035129d9e70a92-7fff.html" addedin="9"/>
+	            <topic label="FileWrite" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6cdf.html" addedin="8"/>
+	            <topic label="FileWriteLine" href="docs/WSc3ff6d0ea77859461172e0811cbec1bb49-7f44.html" addedin="9"/>
 	            <topic label="Find" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7e7c.html"/>
 	            <topic label="FindNoCase" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e16.html"/>
 	            <topic label="FindOneOf" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e19.html"/>
@@ -386,15 +386,15 @@
 	            <topic label="GetBaseTagList" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7d73.html"/>
 	            <topic label="GetBaseTemplatePath" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c65.html"/>
 	            <topic label="GetClientVariablesList" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7ca3.html"/>
-	            <topic label="GetComponentMetaData" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7d9a.html"/>
+	            <topic label="GetComponentMetaData" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7d9a.html" addedin="8"/>
 	            <topic label="GetContextRoot" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6cb9.html"/>
 	            <topic label="GetCurrentTemplatePath" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6cf9.html"/>
 	            <topic label="GetDirectoryFromPath" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c64.html"/>
 	            <topic label="GetEncoding" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e70.html"/>
 	            <topic label="GetException" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6cec.html"/>
 	            <topic label="GetFileFromPath" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c63.html"/>
-	            <topic label="GetFileInfo" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d02.html"/>
-	            <topic label="GetFunctionCalledName" href="docs/WS7cc222be8a31a47d-6e8b7083122cebfc8f2-8000.html"/>
+	            <topic label="GetFileInfo" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d02.html" addedin="8"/>
+	            <topic label="GetFunctionCalledName" href="docs/WS7cc222be8a31a47d-6e8b7083122cebfc8f2-8000.html" addedin="9"/>
 	            <topic label="GetFunctionList" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6cfe.html"/>
 	            <topic label="GetGatewayHelper" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c20.html"/>
 	            <topic label="GetHttpRequestData" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c11.html"/>
@@ -407,11 +407,11 @@
 	            <topic label="GetMetaData" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7dd9.html"/>
 	            <topic label="GetMetricData" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6be2.html"/>
 	            <topic label="GetPageContext" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-787f.html"/>
-	            <topic label="GetPrinterInfo" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-70d5.html"/>
+	            <topic label="GetPrinterInfo" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-70d5.html" addedin="8"/>
 	            <topic label="GetPrinterList" href="docs/WSe9cbe5cf462523a02367d9c012216cd0aa1-8000.html"/>
 	            <topic label="GetProfileSections" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6cff.html"/>
 	            <topic label="GetProfileString" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c62.html"/>
-	            <topic label="GetReadableImageFormats" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-797a.html"/>
+	            <topic label="GetReadableImageFormats" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-797a.html" addedin="8"/>
 	            <topic label="GetSOAPRequest" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6ca2.html"/>
 	            <topic label="GetSOAPRequestHeader" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6ca1.html"/>
 	            <topic label="GetSOAPResponse" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6ca0.html"/>
@@ -422,9 +422,9 @@
 	            <topic label="GetTickCount" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6dd0.html"/>
 	            <topic label="GetTimeZoneInfo" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6df5.html"/>
 	            <topic label="GetToken" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e22.html"/>
-	            <topic label="GetUserRoles" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-71e8.html"/>
-	            <topic label="GetVFSMetaData" href="docs/WS2c2b6b5d2efbc2ce-731e5f6a122ff1509d6-8000.html"/>
-	            <topic label="GetWriteableImageFormats" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7979.html"/>
+	            <topic label="GetUserRoles" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-71e8.html" addedin="8"/>
+	            <topic label="GetVFSMetaData" href="docs/WS2c2b6b5d2efbc2ce-731e5f6a122ff1509d6-8000.html" addedin="9"/>
+	            <topic label="GetWriteableImageFormats" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7979.html" addedin="8"/>
 	         </topic>
 	         <topic label="Functions h-im" href="docs/WSc3ff6d0ea77859461172e0811cbec1d039-7ffe.html">
 	            <topic label="Hash" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c52.html"/>
@@ -437,56 +437,56 @@
 	            <topic label="HTMLCodeFormat" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7848.html"/>
 	            <topic label="HTMLEditFormat" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7847.html"/>
 	            <topic label="IIf" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f4c.html"/>
-	            <topic label="ImageAddBorder" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-796a.html"/>
-	            <topic label="ImageBlur" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7969.html"/>
-	            <topic label="ImageClearRect" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7950.html"/>
-	            <topic label="ImageCopy" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7968.html"/>
-	            <topic label="ImageCrop" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7967.html"/>
-	            <topic label="ImageDrawArc" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-795b.html"/>
-	            <topic label="ImageDrawBeveledRect" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-795a.html"/>
-	            <topic label="ImageDrawCubicCurve" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7959.html"/>
-	            <topic label="ImageDrawLine" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7958.html"/>
-	            <topic label="ImageDrawLines" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7957.html"/>
-	            <topic label="ImageDrawOval" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7956.html"/>
-	            <topic label="ImageDrawPoint" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7955.html"/>
-	            <topic label="ImageDrawQuadraticCurve" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7954.html"/>
-	            <topic label="ImageDrawRect" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7953.html"/>
-	            <topic label="ImageDrawRoundRect" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7952.html"/>
-	            <topic label="ImageDrawText" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7951.html"/>
-	            <topic label="ImageFlip" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7966.html"/>
-	            <topic label="ImageGetBlob" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7971.html"/>
-	            <topic label="ImageGetBufferedImage" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7970.html"/>
-	            <topic label="ImageGetEXIFMetadata" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6bcb.html"/>
-	            <topic label="ImageGetEXIFTag" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7977.html"/>
-	            <topic label="ImageGetHeight" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7976.html"/>
-	            <topic label="ImageGetIPTCMetadata" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6bca.html"/>
-	            <topic label="ImageGetIPTCTag" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7974.html"/>
-	            <topic label="ImageGetWidth" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7973.html"/>
-	            <topic label="ImageGrayscale" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7965.html"/>
-	            <topic label="ImageInfo" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7972.html"/>
-	            <topic label="ImageNegative" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7964.html"/>
-	            <topic label="ImageNew" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-796f.html"/>
-	            <topic label="ImageOverlay" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7963.html"/>
-	            <topic label="ImagePaste" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7962.html"/>
-	            <topic label="ImageRead" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-796e.html"/>
-	            <topic label="ImageReadBase64" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-796d.html"/>
-	            <topic label="ImageResize" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7961.html"/>
-	            <topic label="ImageRotate" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7960.html"/>
-	            <topic label="ImageRotateDrawingAxis" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-794f.html"/>
-	            <topic label="ImageScaleToFit" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7975.html"/>
-	            <topic label="ImageSetAntialiasing" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-794e.html"/>
-	            <topic label="ImageSetBackgroundColor" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-794d.html"/>
-	            <topic label="ImageSetDrawingColor" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-794c.html"/>
-	            <topic label="ImageSetDrawingStroke" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-794b.html"/>
-	            <topic label="ImageSetDrawingTransparency" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-794a.html"/>
-	            <topic label="ImageSharpen" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-795e.html"/>
-	            <topic label="ImageShear" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-795d.html"/>
-	            <topic label="ImageShearDrawingAxis" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7949.html"/>
-	            <topic label="ImageTranslate" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-795c.html"/>
-	            <topic label="ImageTranslateDrawingAxis" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7948.html"/>
-	            <topic label="ImageWrite" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-796c.html"/>
-	            <topic label="ImageWriteBase64" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-796b.html"/>
-	            <topic label="ImageXORDrawingMode" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7947.html"/>
+	            <topic label="ImageAddBorder" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-796a.html" addedin="8"/>
+	            <topic label="ImageBlur" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7969.html" addedin="8"/>
+	            <topic label="ImageClearRect" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7950.html" addedin="8"/>
+	            <topic label="ImageCopy" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7968.html" addedin="8"/>
+	            <topic label="ImageCrop" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7967.html" addedin="8"/>
+	            <topic label="ImageDrawArc" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-795b.html" addedin="8"/>
+	            <topic label="ImageDrawBeveledRect" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-795a.html" addedin="8"/>
+	            <topic label="ImageDrawCubicCurve" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7959.html" addedin="8"/>
+	            <topic label="ImageDrawLine" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7958.html" addedin="8"/>
+	            <topic label="ImageDrawLines" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7957.html" addedin="8"/>
+	            <topic label="ImageDrawOval" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7956.html" addedin="8"/>
+	            <topic label="ImageDrawPoint" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7955.html" addedin="8"/>
+	            <topic label="ImageDrawQuadraticCurve" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7954.html" addedin="8"/>
+	            <topic label="ImageDrawRect" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7953.html" addedin="8"/>
+	            <topic label="ImageDrawRoundRect" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7952.html" addedin="8"/>
+	            <topic label="ImageDrawText" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7951.html" addedin="8"/>
+	            <topic label="ImageFlip" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7966.html" addedin="8"/>
+	            <topic label="ImageGetBlob" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7971.html" addedin="8"/>
+	            <topic label="ImageGetBufferedImage" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7970.html" addedin="8"/>
+	            <topic label="ImageGetEXIFMetadata" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6bcb.html" addedin="8"/>
+	            <topic label="ImageGetEXIFTag" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7977.html" addedin="8"/>
+	            <topic label="ImageGetHeight" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7976.html" addedin="8"/>
+	            <topic label="ImageGetIPTCMetadata" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6bca.html" addedin="8"/>
+	            <topic label="ImageGetIPTCTag" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7974.html" addedin="8"/>
+	            <topic label="ImageGetWidth" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7973.html" addedin="8"/>
+	            <topic label="ImageGrayscale" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7965.html" addedin="8"/>
+	            <topic label="ImageInfo" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7972.html" addedin="8"/>
+	            <topic label="ImageNegative" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7964.html" addedin="8"/>
+	            <topic label="ImageNew" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-796f.html" addedin="8"/>
+	            <topic label="ImageOverlay" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7963.html" addedin="8"/>
+	            <topic label="ImagePaste" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7962.html" addedin="8"/>
+	            <topic label="ImageRead" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-796e.html" addedin="8"/>
+	            <topic label="ImageReadBase64" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-796d.html" addedin="8"/>
+	            <topic label="ImageResize" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7961.html" addedin="8"/>
+	            <topic label="ImageRotate" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7960.html" addedin="8"/>
+	            <topic label="ImageRotateDrawingAxis" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-794f.html" addedin="8"/>
+	            <topic label="ImageScaleToFit" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7975.html" addedin="8"/>
+	            <topic label="ImageSetAntialiasing" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-794e.html" addedin="8"/>
+	            <topic label="ImageSetBackgroundColor" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-794d.html" addedin="8"/>
+	            <topic label="ImageSetDrawingColor" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-794c.html" addedin="8"/>
+	            <topic label="ImageSetDrawingStroke" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-794b.html" addedin="8"/>
+	            <topic label="ImageSetDrawingTransparency" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-794a.html" addedin="8"/>
+	            <topic label="ImageSharpen" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-795e.html" addedin="8"/>
+	            <topic label="ImageShear" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-795d.html" addedin="8"/>
+	            <topic label="ImageShearDrawingAxis" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7949.html" addedin="8"/>
+	            <topic label="ImageTranslate" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-795c.html" addedin="8"/>
+	            <topic label="ImageTranslateDrawingAxis" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7948.html" addedin="8"/>
+	            <topic label="ImageWrite" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-796c.html" addedin="8"/>
+	            <topic label="ImageWriteBase64" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-796b.html" addedin="8"/>
+	            <topic label="ImageXORDrawingMode" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7947.html" addedin="8"/>
 	         </topic>
 	         <topic label="Functions in-k" href="docs/WSc3ff6d0ea77859461172e0811cbec1de14-7fdb.html">
 	            <topic label="IncrementValue" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d3b.html"/>
@@ -500,35 +500,35 @@
 	            <topic label="IsBoolean" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7fab.html"/>
 	            <topic label="IsCustomFunction" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7e28.html"/>
 	            <topic label="IsDate" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7fa5.html"/>
-	            <topic label="IsDDX" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-798b.html"/>
+	            <topic label="IsDDX" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-798b.html" addedin="8"/>
 	            <topic label="IsDebugMode" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7bf4.html"/>
 	            <topic label="IsDefined" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7fbd.html"/>
-	            <topic label="IsImage" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-797b.html"/>
-	            <topic label="IsImageFile" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7978.html"/>
-	            <topic label="IsInstanceOf" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-74f8.html"/>
-	            <topic label="IsIPv6" href="docs/WSe9cbe5cf462523a0238604bb121a51da22c-8000.html"/>
-	            <topic label="IsJSON" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79e3.html"/>
+	            <topic label="IsImage" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-797b.html" addedin="8"/>
+	            <topic label="IsImageFile" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7978.html" addedin="8"/>
+	            <topic label="IsInstanceOf" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-74f8.html" addedin="8"/>
+	            <topic label="IsIPv6" href="docs/WSe9cbe5cf462523a0238604bb121a51da22c-8000.html" addedin="9"/>
+	            <topic label="IsJSON" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79e3.html" addedin="8"/>
 	            <topic label="IsK2ServerABroker" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e68.html"/>
 	            <topic label="IsK2ServerDocCountExceeded" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e65.html"/>
 	            <topic label="IsK2ServerOnline" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e67.html"/>
 	            <topic label="IsLeapYear" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6de9.html"/>
 	            <topic label="IsLocalHost" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6ce5.html"/>
-	            <topic label="IsNull" href="docs/WSe9cbe5cf462523a0-3c4c0bb81223f1daffb-8000.html"/>
+	            <topic label="IsNull" href="docs/WSe9cbe5cf462523a0-3c4c0bb81223f1daffb-8000.html" addedin="9"/>
 	            <topic label="IsNumeric" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7fa4.html"/>
 	            <topic label="IsNumericDate" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6de5.html"/>
 	            <topic label="IsObject" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7faa.html"/>
-	            <topic label="IsPDFFile" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-798a.html"/>
+	            <topic label="IsPDFFile" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-798a.html" addedin="8"/>
 	            <topic label="IsPDFObject" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7989.html"/>
 	            <topic label="IsProtected" href="docs/WSc3ff6d0ea77859461172e0811cbec1de14-7fda.html"/>
 	            <topic label="IsQuery" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7fa9.html"/>
 	            <topic label="IsSimpleValue" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7fa8.html"/>
 	            <topic label="IsSOAPRequest" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6c7e.html"/>
 	            <topic label="IsSpreadsheetFile" href="docs/WS34EA1613-1634-48a6-B686-F0C337E4F191.html" addedin="9"/>
-	            <topic label="IsSpreadsheetObject" href="docs/WS3743F2D5-6BCD-439b-ADE2-0BC29586DC99.html"/>
+	            <topic label="IsSpreadsheetObject" href="docs/WS3743F2D5-6BCD-439b-ADE2-0BC29586DC99.html" addedin="9"/>
 	            <topic label="IsStruct" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7fa7.html"/>
-	            <topic label="IsUserInAnyRole" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7d95.html"/>
+	            <topic label="IsUserInAnyRole" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7d95.html" addedin="8"/>
 	            <topic label="IsUserInRole" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-71e6.html"/>
-	            <topic label="IsUserLoggedIn" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-71e5.html"/>
+	            <topic label="IsUserLoggedIn" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-71e5.html" addedin="8"/>
 	            <topic label="IsValid" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7fb9.html"/>
 	            <topic label="IsWDDX" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6dba.html"/>
 	            <topic label="IsXML" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f67.html"/>
@@ -565,7 +565,7 @@
 	            <topic label="ListValueCount" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e45.html"/>
 	            <topic label="ListValueCountNoCase" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e0f.html"/>
 	            <topic label="LJustify" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e42.html"/>
-	            <topic label="Location" href="docs/WS5EFF891F-C93E-43a7-8082-39253F3EF107.html"/>
+	            <topic label="Location" href="docs/WS5EFF891F-C93E-43a7-8082-39253F3EF107.html" addedin="9"/>
 	            <topic label="Log" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d2f.html"/>
 	            <topic label="Log10" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d2b.html"/>
 	            <topic label="LSCurrencyFormat" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c1a.html"/>
@@ -591,31 +591,31 @@
 	            <topic label="MonthAsString" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7ee4.html"/>
 	            <topic label="Now" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7ff5.html"/>
 	            <topic label="NumberFormat" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-72c8.html"/>
-	            <topic label="ObjectEquals" href="docs/WSfd7453be0f56bba42f37c72c1230905d6e4-8000.html"/>
-	            <topic label="ObjectLoad" href="docs/WSf01dbd23413dda0e613c53881225a218cab-8000.html"/>
-	            <topic label="ObjectSave" href="docs/WSf01dbd23413dda0e613c53881225a218cab-7fff.html"/>
-	            <topic label="ORMClearSession" href="docs/WS76CBC023-7CE6-4772-A0A7-6467E66F9F91.html"/>
-	            <topic label="ORMCloseSession" href="docs/WSE6FEE655-A506-4e0d-A147-8F2312652A5E.html"/>
-	            <topic label="ORMCloseAllSessions" href="docs/WS1717a82d159bbe421e63e3d12a137bc310-8000.html"/>
-	            <topic label="ORMEvictCollection" href="docs/WS46AC4A55-4A63-4c8f-A4CF-AB985E2512AE.html"/>
-	            <topic label="ORMEvictEntity" href="docs/WS5DCE0172-A129-4569-98FE-4B4ABA4B4E06.html"/>
-	            <topic label="ORMEvictQueries" href="docs/WSD5BDE7DD-11B8-43c1-9415-981CDF975848.html"/>
-	            <topic label="ORMExecuteQuery" href="docs/WSfd7453be0f56bba45b6e22cb12308efc3aa-8000.html"/>
-	            <topic label="ORMFlush" href="docs/WS64D9E5CE-6D02-46f2-98C1-785505BBF20B.html"/>
-	            <topic label="ORMFlushall" href="docs/WS1717a82d159bbe421e63e3d12a135ba163-8000.html"/>
-	            <topic label="ORMGetSession" href="docs/WSDFF78DAE-CA92-4f94-B91A-25DCDE725CE5.html"/>
-	            <topic label="ORMGetSessionFactory" href="docs/WS44AAB6F0-5C1E-4e80-9459-9849621E5C72.html"/>
-	            <topic label="ORMReload" href="docs/WSfd7453be0f56bba463eeeea71230904a189-8000.html"/>
+	            <topic label="ObjectEquals" href="docs/WSfd7453be0f56bba42f37c72c1230905d6e4-8000.html" addedin="9"/>
+	            <topic label="ObjectLoad" href="docs/WSf01dbd23413dda0e613c53881225a218cab-8000.html" addedin="9"/>
+	            <topic label="ObjectSave" href="docs/WSf01dbd23413dda0e613c53881225a218cab-7fff.html" addedin="9"/>
+	            <topic label="ORMClearSession" href="docs/WS76CBC023-7CE6-4772-A0A7-6467E66F9F91.html" addedin="9"/>
+	            <topic label="ORMCloseSession" href="docs/WSE6FEE655-A506-4e0d-A147-8F2312652A5E.html" addedin="9"/>
+	            <topic label="ORMCloseAllSessions" href="docs/WS1717a82d159bbe421e63e3d12a137bc310-8000.html" addedin="9"/>
+	            <topic label="ORMEvictCollection" href="docs/WS46AC4A55-4A63-4c8f-A4CF-AB985E2512AE.html" addedin="9"/>
+	            <topic label="ORMEvictEntity" href="docs/WS5DCE0172-A129-4569-98FE-4B4ABA4B4E06.html" addedin="9"/>
+	            <topic label="ORMEvictQueries" href="docs/WSD5BDE7DD-11B8-43c1-9415-981CDF975848.html" addedin="9"/>
+	            <topic label="ORMExecuteQuery" href="docs/WSfd7453be0f56bba45b6e22cb12308efc3aa-8000.html" addedin="9"/>
+	            <topic label="ORMFlush" href="docs/WS64D9E5CE-6D02-46f2-98C1-785505BBF20B.html" addedin="9"/>
+	            <topic label="ORMFlushall" href="docs/WS1717a82d159bbe421e63e3d12a135ba163-8000.html" addedin="9"/>
+	            <topic label="ORMGetSession" href="docs/WSDFF78DAE-CA92-4f94-B91A-25DCDE725CE5.html" addedin="9"/>
+	            <topic label="ORMGetSessionFactory" href="docs/WS44AAB6F0-5C1E-4e80-9459-9849621E5C72.html" addedin="9"/>
+	            <topic label="ORMReload" href="docs/WSfd7453be0f56bba463eeeea71230904a189-8000.html" addedin="9"/>
 	            <topic label="ParagraphFormat" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e24.html"/>
 	            <topic label="ParameterExists" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-64b5.html"/>
 	            <topic label="ParseDateTime" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7843.html"/>
 	            <topic label="Pi" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d20.html"/>
-	            <topic label="PrecisionEvaluate" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7fd9.html"/>
+	            <topic label="PrecisionEvaluate" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7fd9.html" addedin="8"/>
 	            <topic label="PreserveSingleQuotes" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6cbf.html"/>
 	            <topic label="Quarter" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6de8.html"/>
 	            <topic label="QueryAddColumn" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7b7c.html"/>
 	            <topic label="QueryAddRow" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d1b.html"/>
-	            <topic label="QueryConvertForGrid" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79ca.html"/>
+	            <topic label="QueryConvertForGrid" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79ca.html" addedin="8"/>
 	            <topic label="QueryNew" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f94.html"/>
 	            <topic label="QuerySetCell" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d1a.html"/>
 	            <topic label="QuotedValueList" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d16.html"/>
@@ -643,55 +643,55 @@
 	         <topic label="Functions s" href="docs/WSc3ff6d0ea77859461172e0811cbec1fb12-7fd6.html">
 	            <topic label="Second" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6de4.html"/>
 	            <topic label="SendGatewayMessage" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c1f.html"/>
-	            <topic label="SerializeJSON" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79fa.html"/>
+	            <topic label="SerializeJSON" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-79fa.html" addedin="8"/>
 	            <topic label="SetEncoding" href="docs/WSc3ff6d0ea77859461172e0811cbec1fb12-7fcb.html"/>
 	            <topic label="SetLocale" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7fa3.html"/>
 	            <topic label="SetProfileString" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7c5e.html"/>
 	            <topic label="SetVariable" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f49.html"/>
 	            <topic label="Sgn" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d32.html"/>
 	            <topic label="Sin" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d2e.html"/>
-	            <topic label="Sleep" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6f29.html"/>
+	            <topic label="Sleep" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6f29.html" addedin="8"/>
 	            <topic label="SpanExcluding" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e4a.html"/>
 	            <topic label="SpanIncluding" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e08.html"/>
-	            <topic label="SpreadsheetAddColumn" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7478.html"/>
-	            <topic label="SpreadsheetAddImage" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-688c.html"/>
-	            <topic label="SpreadsheetAddFreezePane" href="docs/WS89BB5273-80BA-4c55-9862-4D9D0ADA062B.html"/>
-	            <topic label="SpreadsheetAddInfo" href="docs/WS0ef8c004658c10891919185e120d714f1b1-8000.html"/>
-	            <topic label="SpreadsheetAddRow" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-67ad.html"/>
-	            <topic label="SpreadsheetAddRows" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6790.html"/>
-	            <topic label="SpreadsheetAddSplitPane" href="docs/WS535A3493-C98B-4f09-99A0-3C568F223687.html"/>
-	            <topic label="SpreadsheetCreateSheet" href="docs/WSe9cbe5cf462523a0-660681012216ab44a6-8000.html"/>
-	            <topic label="SpreadsheetDeleteColumn" href="docs/WSe9cbe5cf462523a0-660681012216ab44a6-7fff.html"/>
-	            <topic label="SpreadsheetDeleteColumns" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-677c.html"/>
-	            <topic label="SpreadsheetDeleteRow" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6771.html"/>
-	            <topic label="SpreadsheetDeleteRows" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6770.html"/>
-	            <topic label="SpreadsheetFormatCell" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6747.html"/>
-	            <topic label="SpreadsheetFormatColumn" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6806.html"/>
-	            <topic label="SpreadsheetFormatCellRange" href="docs/WSd160b5fdf5100e8f-42c73281129d9f55115-8000.html"/>
-	            <topic label="SpreadsheetFormatColumns" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-677a.html"/>
-	            <topic label="SpreadsheetFormatRow" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-676f.html"/>
-	            <topic label="SpreadsheetFormatRows" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-676e.html"/>
-	            <topic label="SpreadsheetGetCellComment" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6730.html"/>
-	            <topic label="SpreadsheetGetCellFormula" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6737.html"/>
-	            <topic label="SpreadsheetGetCellValue" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6735.html"/>
-	            <topic label="SpreadsheetInfo" href="docs/WS11D3572B-330F-4ca2-9121-B00B442EE81E.html"/>
-	            <topic label="SpreadsheetMergeCells" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6734.html"/>
-	            <topic label="SpreadsheetNew" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-747b.html"/>
-	            <topic label="SpreadsheetRead" href="docs/WSe9cbe5cf462523a0-7b585809122c5a12c54-8000.html"/>
-	            <topic label="SpreadsheetReadBinary" href="docs/WS42FAD284-A3A8-47f8-8567-F0F51047F767.html"/>
-	            <topic label="SpreadsheetRemoveSheet" href="docs/WSd160b5fdf5100e8f43c43e16129d9d50402-7fff.html"/>
-	            <topic label="SpreadsheetSetActiveSheet" href="docs/WSe9cbe5cf462523a0-676cdab312216addf18-8000.html"/>
-	            <topic label="SpreadsheetSetActiveSheetNumber" href="docs/WSe9cbe5cf462523a0-676cdab312216addf18-7fff.html"/>
-	            <topic label="SpreadsheetSetCellComment" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6733.html"/>
-	            <topic label="SpreadsheetSetCellFormula" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6732.html"/>
-	            <topic label="SpreadsheetSetCellValue" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6731.html"/>
-	            <topic label="SpreadsheetSetColumnWidth" href="docs/WSE5BE1B04-D4F1-4698-BCDF-54B36D67A66D.html"/>
-	            <topic label="SpreadsheetSetFooter" href="docs/WSB10B7FD3-9C3A-43a3-9E83-33ED7C35655B.html"/>
-	            <topic label="SpreadsheetSetHeader" href="docs/WSC6627CF5-07DF-4a55-856F-54B2530A91F5.html"/>
-	            <topic label="SpreadsheetSetRowHeight" href="docs/WSD5DCEA07-5C77-4c79-BCF5-AD48D265243C.html"/>
-	            <topic label="SpreadsheetShiftColumns" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6779.html"/>
-	            <topic label="SpreadsheetShiftRows" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-676d.html"/>
-	            <topic label="SpreadsheetWrite" href="docs/WSe9cbe5cf462523a0-7b585809122c5a12c54-7fff.html"/>
+	            <topic label="SpreadsheetAddColumn" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7478.html" addedin="9"/>
+	            <topic label="SpreadsheetAddImage" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-688c.html" addedin="9"/>
+	            <topic label="SpreadsheetAddFreezePane" href="docs/WS89BB5273-80BA-4c55-9862-4D9D0ADA062B.html" addedin="9"/>
+	            <topic label="SpreadsheetAddInfo" href="docs/WS0ef8c004658c10891919185e120d714f1b1-8000.html" addedin="9"/>
+	            <topic label="SpreadsheetAddRow" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-67ad.html" addedin="9"/>
+	            <topic label="SpreadsheetAddRows" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6790.html" addedin="9"/>
+	            <topic label="SpreadsheetAddSplitPane" href="docs/WS535A3493-C98B-4f09-99A0-3C568F223687.html" addedin="9"/>
+	            <topic label="SpreadsheetCreateSheet" href="docs/WSe9cbe5cf462523a0-660681012216ab44a6-8000.html" addedin="9"/>
+	            <topic label="SpreadsheetDeleteColumn" href="docs/WSe9cbe5cf462523a0-660681012216ab44a6-7fff.html" addedin="9"/>
+	            <topic label="SpreadsheetDeleteColumns" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-677c.html" addedin="9"/>
+	            <topic label="SpreadsheetDeleteRow" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6771.html" addedin="9"/>
+	            <topic label="SpreadsheetDeleteRows" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6770.html" addedin="9"/>
+	            <topic label="SpreadsheetFormatCell" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6747.html" addedin="9"/>
+	            <topic label="SpreadsheetFormatColumn" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6806.html" addedin="9"/>
+	            <topic label="SpreadsheetFormatCellRange" href="docs/WSd160b5fdf5100e8f-42c73281129d9f55115-8000.html" addedin="9"/>
+	            <topic label="SpreadsheetFormatColumns" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-677a.html" addedin="9"/>
+	            <topic label="SpreadsheetFormatRow" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-676f.html" addedin="9"/>
+	            <topic label="SpreadsheetFormatRows" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-676e.html" addedin="9"/>
+	            <topic label="SpreadsheetGetCellComment" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6730.html" addedin="9"/>
+	            <topic label="SpreadsheetGetCellFormula" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6737.html" addedin="9"/>
+	            <topic label="SpreadsheetGetCellValue" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6735.html" addedin="9"/>
+	            <topic label="SpreadsheetInfo" href="docs/WS11D3572B-330F-4ca2-9121-B00B442EE81E.html" addedin="9"/>
+	            <topic label="SpreadsheetMergeCells" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6734.html" addedin="9"/>
+	            <topic label="SpreadsheetNew" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-747b.html" addedin="9"/>
+	            <topic label="SpreadsheetRead" href="docs/WSe9cbe5cf462523a0-7b585809122c5a12c54-8000.html" addedin="9"/>
+	            <topic label="SpreadsheetReadBinary" href="docs/WS42FAD284-A3A8-47f8-8567-F0F51047F767.html" addedin="9"/>
+	            <topic label="SpreadsheetRemoveSheet" href="docs/WSd160b5fdf5100e8f43c43e16129d9d50402-7fff.html" addedin="9"/>
+	            <topic label="SpreadsheetSetActiveSheet" href="docs/WSe9cbe5cf462523a0-676cdab312216addf18-8000.html" addedin="9"/>
+	            <topic label="SpreadsheetSetActiveSheetNumber" href="docs/WSe9cbe5cf462523a0-676cdab312216addf18-7fff.html" addedin="9"/>
+	            <topic label="SpreadsheetSetCellComment" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6733.html" addedin="9"/>
+	            <topic label="SpreadsheetSetCellFormula" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6732.html" addedin="9"/>
+	            <topic label="SpreadsheetSetCellValue" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6731.html" addedin="9"/>
+	            <topic label="SpreadsheetSetColumnWidth" href="docs/WSE5BE1B04-D4F1-4698-BCDF-54B36D67A66D.html" addedin="9"/>
+	            <topic label="SpreadsheetSetFooter" href="docs/WSB10B7FD3-9C3A-43a3-9E83-33ED7C35655B.html" addedin="9"/>
+	            <topic label="SpreadsheetSetHeader" href="docs/WSC6627CF5-07DF-4a55-856F-54B2530A91F5.html" addedin="9"/>
+	            <topic label="SpreadsheetSetRowHeight" href="docs/WSD5DCEA07-5C77-4c79-BCF5-AD48D265243C.html" addedin="9"/>
+	            <topic label="SpreadsheetShiftColumns" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6779.html" addedin="9"/>
+	            <topic label="SpreadsheetShiftRows" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-676d.html" addedin="9"/>
+	            <topic label="SpreadsheetWrite" href="docs/WSe9cbe5cf462523a0-7b585809122c5a12c54-7fff.html" addedin="9"/>
 	            <topic label="Sqr" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d2a.html"/>
 	            <topic label="StripCR" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e0b.html"/>
 	            <topic label="StructAppend" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f0b.html"/>
@@ -714,18 +714,18 @@
 	         </topic>
 	         <topic label="Functions t-z" href="docs/WSc3ff6d0ea77859461172e0811cbec20301-8000.html">
 	            <topic label="Tan" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d26.html"/>
-	            <topic label="ThreadJoin" href="docs/WSe9cbe5cf462523a03f6b340712216e06f74-8000.html"/>
-	            <topic label="ThreadTerminate" href="docs/WSe9cbe5cf462523a03f6b340712216e06f74-7fff.html"/>
-	            <topic label="Throw" href="docs/WSB45D1B4F-BFFD-4585-B23E-53F3121B4046.html"/>
+	            <topic label="ThreadJoin" href="docs/WSe9cbe5cf462523a03f6b340712216e06f74-8000.html" addedin="9"/>
+	            <topic label="ThreadTerminate" href="docs/WSe9cbe5cf462523a03f6b340712216e06f74-7fff.html" addedin="9"/>
+	            <topic label="Throw" href="docs/WSB45D1B4F-BFFD-4585-B23E-53F3121B4046.html" addedin="9"/>
 	            <topic label="TimeFormat" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6de0.html"/>
 	            <topic label="ToBase64" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7fc0.html"/>
 	            <topic label="ToBinary" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f9f.html"/>
 	            <topic label="ToScript" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e9d.html"/>
 	            <topic label="ToString" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f9e.html"/>
-	            <topic label="Trace" href="docs/WS09E6439E-5327-40ea-A668-5278A6D3FB03.html"/>
-	            <topic label="TransactionCommit" href="docs/WSe9cbe5cf462523a0-7935b865123606fb32f-8000.html"/>
-	            <topic label="TransactionRollback" href="docs/WSe9cbe5cf462523a0-7935b865123606fb32f-7fff.html"/>
-	            <topic label="TransactionSetSavePoint" href="docs/WSe9cbe5cf462523a0-7935b865123606fb32f-7ffe.html"/>
+	            <topic label="Trace" href="docs/WS09E6439E-5327-40ea-A668-5278A6D3FB03.html" addedin="9"/>
+	            <topic label="TransactionCommit" href="docs/WSe9cbe5cf462523a0-7935b865123606fb32f-8000.html" addedin="9"/>
+	            <topic label="TransactionRollback" href="docs/WSe9cbe5cf462523a0-7935b865123606fb32f-7fff.html" addedin="9"/>
+	            <topic label="TransactionSetSavePoint" href="docs/WSe9cbe5cf462523a0-7935b865123606fb32f-7ffe.html" addedin="9"/>
 	            <topic label="Trim" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7b61.html"/>
 	            <topic label="UCase" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7f41.html"/>
 	            <topic label="URLDecode" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e38.html"/>
@@ -733,11 +733,11 @@
 	            <topic label="URLSessionFormat" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7cab.html"/>
 	            <topic label="Val" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e64.html"/>
 	            <topic label="ValueList" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6d19.html"/>
-	            <topic label="VerifyClient" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e52.html"/>
+	            <topic label="VerifyClient" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e52.html" addedin="8"/>
 	            <topic label="Week" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e53.html"/>
 	            <topic label="Wrap" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7114.html"/>
-	            <topic label="WriteDump" href="docs/WS5A998FA0-0173-4be8-9548-680E8F40A5F2.html"/>
-	            <topic label="WriteLog" href="docs/WS48D04B65-0694-44e9-9E35-F9D7C9152B6C.html"/>
+	            <topic label="WriteDump" href="docs/WS5A998FA0-0173-4be8-9548-680E8F40A5F2.html" addedin="9"/>
+	            <topic label="WriteLog" href="docs/WS48D04B65-0694-44e9-9E35-F9D7C9152B6C.html" addedin="9"/>
 	            <topic label="WriteOutput" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-7ecf.html"/>
 	            <topic label="XmlChildPos" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e92.html"/>
 	            <topic label="XmlElemNew" href="docs/WSc3ff6d0ea77859461172e0811cbec22c24-6e56.html"/>
