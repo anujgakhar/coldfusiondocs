@@ -84,10 +84,15 @@ class @DocsController
     $(@spinner.el).remove()
 
   filterResults: ->
-    @criteria = @searchInput.val()
     @docItems.find("li").hide()
-    @docItems.find("li[data-label*=" + @criteria + "][data-addedin*=" + @selectedVersionFilter.toString() + "]").show()
-    @searchInput.focus()
+    @filters = []
+    @searchCriteria = "li[data-label*=" + @searchInput.val() + "]"
+    for vFilter in @selectedVersionFilter
+      @searchString = @searchCriteria
+      @searchString = @searchString.concat("[data-addedin=" + vFilter + "]")
+      @filters.push(@searchString)
+    @filters.push(@searchCriteria) if @selectedVersionFilter.length == 0
+    @docItems.find(@filters.join(",")).show()
     false     
 
 # Loads XML data for a supplied URL.
